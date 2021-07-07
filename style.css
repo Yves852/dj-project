@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.about {
+    background-color: white;
+    width: 100%;
+}
+
+.about--style {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about hr {
+    width: 40%;
+    position: relative;
+    margin: 20px;
+    margin-left: 5px;
+    color: #444444;
+}
+
+/* button contact */
+#about-btn-contact {
+    width: 150px;
+    height: 3em;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+/* Images */
+/* img signature */
+#about-img-signature {
+    position: relative;
+    left: 40%;
+    margin: 10px;
+}
+/* Angerone's img */
+#about-img-angerone {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+}
+
+#about-musics {
+    background-color: #f5f5f5;
+}
+
+/* Responsive */
+@media only screen and (min-width: 1025) {
+    /* Desktop screens and above */
+    .about {
+
+    }
+}
