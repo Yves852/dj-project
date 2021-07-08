@@ -1,7 +1,30 @@
+/* CSS common to the whole website */
+/* ******************************* */
+
 * {
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3 {
+    color: #282828;
+}
+
+p {
+ color: #444444;
+}
+
+/* Buttons */
+.purple {
+    background-color: #8121e0;
+}
+
+.white {
+    background-color: white;
+}
+
+/* Page about */
+/* ********** */
 
 /* Main container */
 .about {
