@@ -1,0 +1,372 @@
+/* START - CSS common to the whole website */
+/* ******************************* */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+h1, h2, h3 {
+    color: #282828;
+}
+
+h1 {
+    font-size:100%;
+    /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
+}
+
+h2 {
+    font-size:100%;
+    /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
+}
+h3 {
+    font-size:100%;
+    /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
+}
+
+p {
+ color: #444444;
+}
+
+/* Buttons */
+.purple {
+    background-color: #8121e0;
+    font-weight:bold;
+    color:white;
+    border:#8121e0 1px solid;
+}
+
+.white {
+    background-color: white;
+    font-weight:bold;
+    color:black;
+    border: black 1px solid;
+}
+
+/* ******************************* */
+/* END - CSS common to the whole website */
+
+/* Header style */
+/* NB : mobile first */
+header {
+    background-image: url("./images/banner-img.jpg");
+    text-transform: uppercase;
+}
+
+header li {
+    list-style: none;
+}
+
+header a, 
+header h1,
+header h2,
+header h3,
+header p {
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.header-menu {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.header-menu>* {
+    margin-right: 20px;
+}
+
+.header-title {
+    height: 150px;
+    text-align: center;
+    /* Alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.header-sub-menu {
+    /* Remove apparent background and border */
+    background-color: transparent;
+    border: none;
+    /* Text color */
+    color: white;
+    /* Center vertically */
+    align-self: center;
+    /* margin-left auto will push this flexed element fully to the right */
+    margin-left: auto;
+    width: auto;
+}
+
+.header-sub-menu svg {
+    /* svg size */
+    height: 2em;
+}
+
+.logo {
+    width: auto;
+    height: 2em;
+    color: white;
+}
+
+#header-logo {
+    display: inline-block;
+}
+
+/* Hamburger menu */
+/* Source : https://codepen.io/benoitwimart/pen/ORPmrg/ */
+#wrap {
+    /* font-family: sans-serif; */
+    /*font-size: 21px;*/
+    /*line-height: 1.6;*/
+    /*margin: 0;*/
+    /*display: flex;*/
+    color: #8121e0;
+    transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+    /* Center vertically */
+    align-self: center;
+}
+
+/* ul with links */
+#menu-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Change #wrap bloc size and display when menu is not clicked*/
+#wrap:not(:target)  {
+    /*transform: translate3d(-335px, 0, 0);*/
+    width: 50px; /* Restrict size so other elements come next to it */
+    display: inline-block;
+}
+
+/* Change #wrap when menu clicked */
+#wrap:target {
+    /*transform: translate3d(0, 0, 0);*/
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+/* This bloc make content disapear when menu unclicked*/
+#wrap:not(:target) #menu-content {
+    display: none;
+}
+
+/* Styling buttons */
+#header-hamburger-open,
+#header-hamburger-close {
+    color: white;
+    height: 44px;
+    font-size: larger;
+    /*text-align: right;*/
+    /* display: block; */
+    /*margin-right: -30px;*/
+}
+
+/* Buttons display conditions */
+#wrap:target #header-hamburger-open,
+#wrap:not(:target) #header-hamburger-close {
+    display: none;
+}
+
+#wrap:target #header-hamburger-open {
+    display: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #282828;
+    padding: 3em;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LINK TO THE PAGES */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.linkpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    align-content: space-between;
+    /* margin: 2em; */
+}
+
+
+/* LINK TO SOCIAL MEDIAS */
+
+.linksocial {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.socialfooter {
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
+    border-radius: 50%;
+    background: #444444;
+    padding: 2em;
+    margin: 0 1em;
+}
+
+
+/* BACK-TO-TOP BUTTON */
+
+.topbutton {
+    border-radius: 15%;
+    background: #8121e0;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 1em;
+    /* margin: 0 auto; */
+    text-align: center;
+    line-height: 2em;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+}
+
+.uparrow {
+    width: 1em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* COPYRIGHT */
+
+p {
+    color: #444444;
+}
+
+/* Page about */
+/* ********** */
+
+/* Main container */
+.about {
+    background-color: white;
+    width: 100%;
+}
+
+.about svg {
+    height: 1em;
+    width: auto;
+    margin-right: 10px;
+}
+
+.about--style {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about hr {
+    width: 40%;
+    position: relative;
+    margin: 20px;
+    margin-left: 5px;
+    color: #444444;
+}
+
+/* Sections class */
+.about-sections {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* width: 100%; */
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about-musics img {
+    width: 50px;
+    height: auto;
+}
+
+/* Sections ids */
+
+/* Links section */
+#about-links a {
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+#about-musics {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#about-latest {
+    text-align: center;
+}
+
+/* button contact */
+#about-btn-contact {
+    width: 150px;
+    height: 3em;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+/* Images */
+/* img signature */
+#about-img-signature {
+    position: relative;
+    left: 40%;
+    margin: 10px;
+}
+/* Angerone's img */
+#about-img-angerone {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;/* 
+    padding-left: 5%;
+    padding-right: 5%; */
+}
+
+/* Responsive */
+@media only screen and (min-width: 1025) {
+    /* Desktop screens and above */
+    .about {
+
+    }
+}
