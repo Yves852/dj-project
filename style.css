@@ -23,6 +23,94 @@ p {
     background-color: white;
 }
 
+/* Header style */
+/* NB : mobile first */
+header {
+    background-image: url("./images/banner-img.jpg");
+    padding: 40px;
+}
+
+header li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    width: auto;
+    height: 2em;
+    color: white;
+}
+
+#header-logo {
+    display: inline-block;
+}
+
+/* Hamburger menu */
+/* Source : https://codepen.io/benoitwimart/pen/ORPmrg/ */
+#wrap {
+    /* font-family: sans-serif; */
+    /*font-size: 21px;*/
+    /*line-height: 1.6;*/
+    /*margin: 0;*/
+    /*display: flex;*/
+    color: #8121e0;
+    transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* ul with links */
+#menu-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Change #wrap bloc size and display when menu is not clicked*/
+#wrap:not(:target)  {
+    /*transform: translate3d(-335px, 0, 0);*/
+    width: 50px; /* Restrict size so other elements come next to it */
+    display: inline-block;
+}
+
+/* Change #wrap when menu clicked */
+#wrap:target {
+    /*transform: translate3d(0, 0, 0);*/
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+/* This bloc make content disapear when menu unclicked*/
+#wrap:not(:target) #menu-content {
+    display: none;
+}
+
+/* Styling buttons */
+#header-hamburger-open,
+#header-hamburger-close {
+    color: white;
+    height: 44px;
+    font-size: larger;
+    /*text-align: right;*/
+    /* display: block; */
+    /*margin-right: -30px;*/
+}
+
+/* Buttons display conditions */
+#wrap:target #header-hamburger-open,
+#wrap:not(:target) #header-hamburger-close {
+    display: none;
+}
+
+#wrap:target #header-hamburger-open {
+    display: none;
+}
+
 /* Page about */
 /* ********** */
 
