@@ -27,7 +27,6 @@ p {
 /* NB : mobile first */
 header {
     background-image: url("./images/banner-img.jpg");
-    padding: 40px;
 }
 
 header li {
@@ -37,6 +36,36 @@ header li {
 header a {
     text-decoration: none;
     color: white;
+}
+
+.header-menu {
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.header-menu>* {
+    margin-right: 20px;
+}
+
+.header-sub-menu {
+    /* Remove apparent background and border */
+    background-color: transparent;
+    border: none;
+    /* Text color */
+    color: white;
+    /* Center vertically */
+    align-self: center;
+    /* margin-left auto will push this flexed element fully to the right */
+    margin-left: auto;
+    width: auto;
+}
+
+.header-sub-menu svg {
+    /* svg size */
+    height: 2em;
 }
 
 .logo {
@@ -59,8 +88,8 @@ header a {
     /*display: flex;*/
     color: #8121e0;
     transition: transform .4s cubic-bezier(.25, .1, .25, 1);
-    justify-content: center;
-    flex-direction: row;
+    /* Center vertically */
+    align-self: center;
 }
 
 /* ul with links */
