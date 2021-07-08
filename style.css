@@ -1,7 +1,167 @@
+/* CSS common to the whole website */
+/* ******************************* */
+
 * {
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3 {
+    color: #282828;
+}
+
+p {
+ color: #444444;
+}
+
+/* Buttons */
+.purple {
+    background-color: #8121e0;
+}
+
+.white {
+    background-color: white;
+}
+
+/* Header style */
+/* NB : mobile first */
+header {
+    background-image: url("./images/banner-img.jpg");
+    text-transform: uppercase;
+}
+
+header li {
+    list-style: none;
+}
+
+header a, 
+header h1,
+header h2,
+header h3,
+header p {
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.header-menu {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.header-menu>* {
+    margin-right: 20px;
+}
+
+.header-title {
+    height: 150px;
+    text-align: center;
+    /* Alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.header-sub-menu {
+    /* Remove apparent background and border */
+    background-color: transparent;
+    border: none;
+    /* Text color */
+    color: white;
+    /* Center vertically */
+    align-self: center;
+    /* margin-left auto will push this flexed element fully to the right */
+    margin-left: auto;
+    width: auto;
+}
+
+.header-sub-menu svg {
+    /* svg size */
+    height: 2em;
+}
+
+.logo {
+    width: auto;
+    height: 2em;
+    color: white;
+}
+
+#header-logo {
+    display: inline-block;
+}
+
+/* Hamburger menu */
+/* Source : https://codepen.io/benoitwimart/pen/ORPmrg/ */
+#wrap {
+    /* font-family: sans-serif; */
+    /*font-size: 21px;*/
+    /*line-height: 1.6;*/
+    /*margin: 0;*/
+    /*display: flex;*/
+    color: #8121e0;
+    transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+    /* Center vertically */
+    align-self: center;
+}
+
+/* ul with links */
+#menu-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Change #wrap bloc size and display when menu is not clicked*/
+#wrap:not(:target)  {
+    /*transform: translate3d(-335px, 0, 0);*/
+    width: 50px; /* Restrict size so other elements come next to it */
+    display: inline-block;
+}
+
+/* Change #wrap when menu clicked */
+#wrap:target {
+    /*transform: translate3d(0, 0, 0);*/
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+/* This bloc make content disapear when menu unclicked*/
+#wrap:not(:target) #menu-content {
+    display: none;
+}
+
+/* Styling buttons */
+#header-hamburger-open,
+#header-hamburger-close {
+    color: white;
+    height: 44px;
+    font-size: larger;
+    /*text-align: right;*/
+    /* display: block; */
+    /*margin-right: -30px;*/
+}
+
+/* Buttons display conditions */
+#wrap:target #header-hamburger-open,
+#wrap:not(:target) #header-hamburger-close {
+    display: none;
+}
+
+#wrap:target #header-hamburger-open {
+    display: none;
+}
+
+/* Page about */
+/* ********** */
 
 /* Main container */
 .about {
