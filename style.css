@@ -194,6 +194,86 @@ header a {
     display: none;
 }
 
+/* FOOTER */
+
+footer {
+    background-color: #282828;
+    padding: 3em;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LINK TO THE PAGES */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.linkpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    align-content: space-between;
+    /* margin: 2em; */
+}
+
+
+/* LINK TO SOCIAL MEDIAS */
+
+.linksocial {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.socialfooter {
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
+    border-radius: 50%;
+    background: #444444;
+    padding: 2em;
+    margin: 0 1em;
+}
+
+
+/* BACK-TO-TOP BUTTON */
+
+.topbutton {
+    border-radius: 15%;
+    background: #8121e0;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 1em;
+    /* margin: 0 auto; */
+    text-align: center;
+    line-height: 2em;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+}
+
+.uparrow {
+    width: 1em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* COPYRIGHT */
+
+p {
+    color: #444444;
+}
+
 /* Page about */
 /* ********** */
 
