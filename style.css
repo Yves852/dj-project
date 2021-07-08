@@ -1,13 +1,38 @@
-/* CSS common to the whole website */
+/* START - CSS common to the whole website */
 /* ******************************* */
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 h1, h2, h3 {
     color: #282828;
+}
+
+h1 {
+    font-size:100%;
+    /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
+}
+
+h2 {
+    font-size:100%;
+    /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
+}
+h3 {
+    font-size:100%;
+    /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
 }
 
 p {
@@ -17,11 +42,20 @@ p {
 /* Buttons */
 .purple {
     background-color: #8121e0;
+    font-weight:bold;
+    color:white;
+    border:#8121e0 1px solid;
 }
 
 .white {
     background-color: white;
+    font-weight:bold;
+    color:black;
+    border: black 1px solid;
 }
+
+/* ******************************* */
+/* END - CSS common to the whole website */
 
 /* Header style */
 /* NB : mobile first */
