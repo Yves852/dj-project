@@ -13,9 +13,20 @@
 
 <body>
     <header>
-        <a href="#"><img src="./images/logo.png" alt="Angerone Logo"></a>
-        <nav>
-            <ul>
+        <nav class="header-nav" id="wrap"> 
+            <!-- Drawing of the menu button -->  
+            <a href="#wrap" id="header-hamburger-open">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
+                <rect fill="#FFFFFF" width="34" height="4"/>
+                <rect y="11" fill="#FFFFFF" width="34" height="4"/>
+                <rect y="23" fill="#FFFFFF" width="34" height="4"/>
+                </svg>
+            </a>
+            <!-- Close button -->
+            <a href="#" id="header-hamburger-close">×</a>
+
+            <!-- Menu content -->
+            <ul id="menu-content">
                 <li>
                     <a href="#">About</a>
                 </li>
@@ -28,7 +39,7 @@
                 <li>
                     <a href="#">Photos</a>
                 <li>
-                    <a target="_blank" href="https://www.facebook.com/"><img class="logo" src="./logos/facebook.svg" alt="facebook logo"></a>>
+                    <a target="_blank" href="https://www.facebook.com/"><img class="logo" src="./logos/facebook.svg" alt="facebook logo"></a>
                 </li>
                 <li>
                     <a target="_blank" href="https://www.instagram.com/"><img class="logo" src="./logos/instagram.svg" alt="instagram logo"></a>
@@ -39,8 +50,10 @@
                 <li>
                     <a target="_blank" href="https://www.youtube.com/"><img class="logo" src="./logos/youtube.svg" alt="youtube logo"></a>
                 </li>
-            </ul>
+            </ul>       
         </nav>
+        <a id="header-logo" href="#"><img src="./images/logo.png" alt="Angerone Logo"></a>
+        
         <button><i class="fas fa-bars" alt="..."></i></button>
         <h1>Title of page</h1>
         <p>Home • About us</p>
