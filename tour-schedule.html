@@ -11,80 +11,96 @@
 </head>
 <body>
     <header>
-        <a href="#"><img src="./images/logo.png" alt="Angerone Logo"></a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Discography</a>
-                </li>
-                <li>
-                    <a href="">Tours</a>
-                </li>
-                <li>
-                    <a href="">Photos</a>
-                <li>
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                    <a href=""><i class="fab fa-youtube"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <button><i class="fas fa-bars"></i></button>
-        <h1>Title of page</h1>
-        <p>Home • About us</p>
+        <section class="header-menu">
+            <nav class="header-nav" id="wrap">
+                <!-- Drawing of the menu button -->
+                <a href="#wrap" id="header-hamburger-open">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
+                    <rect fill="#FFFFFF" width="34" height="4"/>
+                    <rect y="11" fill="#FFFFFF" width="34" height="4"/>
+                    <rect y="23" fill="#FFFFFF" width="34" height="4"/>
+                    </svg>
+                </a>
+                <!-- Close button -->
+                <a href="#" id="header-hamburger-close">×</a>
+
+                <!-- Menu content -->
+                <ul id="menu-content">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Discography</a>
+                    </li>
+                    <li>
+                        <a href="#">Tours</a>
+                    </li>
+                    <li>
+                        <a href="#">Photos</a>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/"><img class="logo" src="./logos/facebook.svg" alt="facebook logo"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/"><img class="logo" src="./logos/instagram.svg" alt="instagram logo"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/"><img class="logo" src="./logos/twitter.svg" alt="twitter logo"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/"><img class="logo" src="./logos/youtube.svg" alt="youtube logo"></a>
+                        </li>
+                </ul>
+            </nav>
+            <a id="header-logo" href="#"><img src="./images/logo.png" alt="Angerone Logo"></a>
+
+            <button class="header-sub-menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-v" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="kebab-menu-svg"><path fill="currentColor" d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z" class=""></path></svg></button>
+        </section>
+        <section class="header-title">
+            <h1>Tour schedule</h1>
+            <p>Home • About us</p>
+        </section>
     </header>
     <main>     
         <!-- Calendar -->   
-        <section>
+        <section class="tour__section">
             <!-- Months selection bar -->
-            <nav>
-                <button><time datetime="2019-03">March</time></button>
-                <button><time datetime="2019-04">April</time></button>
-                <button><time datetime="2019-05">May</time></button>
+            <nav class="tour__nav">
+                <button class="tour__button--calendar"><time datetime="2019-03">March</time></button>
+                <button class="tour__button--calendar"><time datetime="2019-04">April</time></button>
+                <button class="tour__button--calendar"><time datetime="2019-05">May</time></button>
             </nav>
             <!-- Contents -->
             <!-- March -->
-            <section>
-                <article>
-                    <h3>March, 2019</h3>
+            <section class="tour__section--calendar">
+                <article class="tour__calendar__article tour__calendar__article--row2">
+                    <h3>March 13, 2019</h3>
                     <h2>Encore Beach Club, Las Vegas</h2>
+                    <p>DJ Angerone will visit one of the most famous night clubs in Las Vegas in March to play his latest tracks and the greatest Trance hits as a part of hus US tous.</p>
                     <a href="#">Buy tickets >></a>
                 </article>
-                <article>
+                <article class="tour__calendar__article tour__calendar__article--row2">
                     <h3>March 21, 2019</h3>
-                    <h2>Soundscape Weekender Festival, Coventry</h2>
+                    <h2>Soundscape Weekender Festival, Coventry</h2>                    
                     <a href="#">Buy tickets >></a>
                 </article>
-                <article>
+                <article class="tour__calendar__article tour__calendar__article--row2">
                     <h3>March 25, 2019</h3>
-                    <h2>Barcelona Beach Festival, Barcelona</h2>
+                    <h2>Barcelona Beach Festival, Barcelona</h2>                    
                     <a href="#">Buy tickets >></a>
                 </article>
-                <article>
+                <article class="tour__calendar__article tour__calendar__article--row2">
                     <h3>March 29, 2019</h3>
-                    <h2>Barclaycard Arena, Hamburg</h2>
+                    <h2>Barclaycard Arena, Hamburg</h2>                    
                     <a href="#">Buy tickets >></a>
                 </article>
-                <article>
+                <article class="tour__calendar__article tour__calendar__article--row2">
                     <h3>March 30, 2019</h3>
-                    <h2>Unipol Arena, Bologna</h2>
+                    <h2>Unipol Arena, Bologna</h2>                    
                     <a href="#">Buy tickets >></a>
                 </article>
             </section>
             <!-- April -->
-            <section></section>
             <!-- May -->
-            <section></section>
         </section>
     </main>
     <footer></footer>

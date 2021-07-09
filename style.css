@@ -363,10 +363,53 @@ p {
     padding-right: 5%; */
 }
 
-/* Responsive */
-@media only screen and (min-width: 1025) {
-    /* Desktop screens and above */
-    .about {
+/* Page tour schedule */
+/* **************** */
 
-    }
+.tour__section {
+    margin: 40px;
+}
+
+.tour__nav {
+    background-color: black;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px 15px 0 0;
+}
+
+.tour__button--calendar {
+    border:none;
+    background-color: inherit;
+    height: 3em;
+
+    /* Text style */
+    color: #444444;
+    font-size: larger;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+.tour__button--calendar:hover {
+    color: white;
+    border-bottom: 4px solid #8121e0;
+}
+
+.tour__section--calendar {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.tour__section--calendar a {
+    color: black;
+}
+
+.tour__calendar__article *{
+    margin: 10px;
+}
+
+.tour__calendar__article--row2 {
+    grid-column: 2;
 }
