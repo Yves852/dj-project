@@ -108,7 +108,7 @@ header a {
     justify-content: space-evenly;
 }
 
-/*  */
+/* Second hamburger menu */
 .header__sub-menu {
     /* Remove apparent background and border */
     background-color: transparent;
