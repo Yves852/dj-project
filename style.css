@@ -290,6 +290,11 @@ p {
     color: #444444;
 }
 
+.about__h1 {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
 /* svg logos */
 .about__svg--logo {
     height: 1em;
@@ -316,13 +321,17 @@ p {
 
 /* Sections class */
 .about__section {
-    margin-top: 40px;
+    padding-top: 40px;
+    /* margin-top: 40px; */
     margin-bottom: 40px;
     /* width: 100%; */
-    padding-left: 5%;
-    padding-right: 5%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.about__section--links {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .about__section--links a {
@@ -335,8 +344,39 @@ p {
     text-align: center;
 }
 
+.about__section--music p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .about__section--latest {
     text-align: center;
+}
+
+/* Articles */
+.about__article {
+    padding-right: 0;
+    padding-left: 0;    
+}
+
+.about__article>* {
+    margin-bottom: 10px;
+}
+
+
+/* .about__article p, 
+.about__article h3, 
+.about__article img {
+    margin-bottom: 10px;
+} */
+
+.about__article--music {
+    padding: 0;
+    /*border: 3px solid white;
+    border-color: white transparent transparent transparent;
+    border-radius: 50%/100% 100% 0 0; */
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 /* button contact */
