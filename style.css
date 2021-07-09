@@ -80,7 +80,9 @@ header a {
     text-decoration: none;
 }
 
-.header-menu {
+/* .header__ stand for elements depending of header in this case, even if header is a tag instead of a class */
+/* __menu is hamburger menu for mobile screen */
+.header__menu {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -91,11 +93,13 @@ header a {
     justify-content: flex-start;
 }
 
-.header-menu>* {
+/* Effects on all elements directly children of the class */
+.header__menu>* {
     margin-right: 20px;
 }
 
-.header-title {
+/* Refer to hn and p showing as head of the pages, not litteral hn headings */
+.header__title {
     height: 150px;
     text-align: center;
     /* Alignment */
@@ -104,7 +108,8 @@ header a {
     justify-content: space-evenly;
 }
 
-.header-sub-menu {
+/* Second hamburger menu */
+.header__sub-menu {
     /* Remove apparent background and border */
     background-color: transparent;
     border: none;
@@ -117,17 +122,14 @@ header a {
     width: auto;
 }
 
-.header-sub-menu svg {
-    /* svg size */
-    height: 2em;
-}
-
-.logo {
+.header__sub-menu__logo-svg {
+    /* svg size */    
     width: auto;
     height: 2em;
     color: white;
 }
 
+/* Angerone's logo */
 #header-logo {
     display: inline-block;
 }
