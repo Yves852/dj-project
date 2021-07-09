@@ -281,20 +281,18 @@ p {
 .about {
     background-color: white;
     width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.about svg {
+/* svg logos */
+.about__svg--logo {
     height: 1em;
     width: auto;
     margin-right: 10px;
 }
 
-.about--style {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.about hr {
+.about__hr {
     width: 40%;
     position: relative;
     margin: 20px;
@@ -303,7 +301,7 @@ p {
 }
 
 /* Sections class */
-.about-sections {
+.about__section {
     margin-top: 40px;
     margin-bottom: 40px;
     /* width: 100%; */
@@ -313,35 +311,37 @@ p {
     margin-right: auto;
 }
 
-#about-musics img {
-    width: 50px;
-    height: auto;
-}
-
-/* Sections ids */
-
-/* Links section */
-#about-links a {
+.about__section--links a {
     margin-top: 10px;
     margin-right: 15px;
 }
 
-#about-musics {
+.about__section--music {
     background-color: #f5f5f5;
     text-align: center;
 }
 
-#about-latest {
+.about__section--latest {
     text-align: center;
 }
 
 /* button contact */
-#about-btn-contact {
+.about__button--contact {
     width: 150px;
     height: 3em;
     text-transform: uppercase;
     margin: 10px;
 }
+
+/* Images in music section */
+.about__img--music {
+    width: 50px;
+    height: auto;
+}
+
+
+
+/* Sections ids, unique elements */
 
 /* Images */
 /* img signature */
