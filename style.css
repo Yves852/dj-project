@@ -144,7 +144,7 @@ header a {
 /* Source : https://codepen.io/benoitwimart/pen/ORPmrg/ */
     
 /* ul with links */
-#header__ul--menu-content {    
+#header__ul--pages, #header__ul--social {    
     /* Flex */
     display: flex;
     justify-content: space-evenly;
@@ -170,36 +170,35 @@ header a {
     }
     
     /* This bloc make content disapear when menu unclicked*/
-    #header-pages-wrap:not(:target) #header__ul--menu-content,
-    #header-social-wrap:not(:target) #header__ul--social-content {
+    #header-pages-wrap:not(:target) #header__ul--pages,
+    #header-social-wrap:not(:target) #header__ul--social {
         display: none;
     }
 
     /* Display pages menu when menu clicked */
     #header-pages-wrap:target {
-        /*transform: translate3d(0, 0, 0);*/
         width: 100%;
         margin-top: 40px;
-        flex-shrink: 0;
         /* Flex positioning content */
         display: flex;
         justify-content: space-around;
     }
 
-    #header-pages-wrap:target>#header__ul--menu-content {
+    /* When clicked, lists take all width */
+    #header-pages-wrap:target>#header__ul--pages {
         width: 100%;
     }
-
-    #header-pages-wrap:target>#header__a--pages-close {
-        /* width: 40px; */
-    }
-
     /* Display links menu when clicked */
     #header-social-wrap:target {
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
         margin-top: 40px; 
+        /* Flex positioning content */
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #header-social-wrap:target>#header__ul--social {
+        width: 100%;
     }
     
     /* Styling buttons */
@@ -242,11 +241,11 @@ header a {
         visibility: collapse;
     }
 
-    .header-nav #header__ul--menu-content {
+    .header-nav #header__ul--pages {
         visibility: visible;
     }
 
-    /* #header__ul--menu-content {
+    /* #header__ul--pages {
         display: inline;
     } */
 }
