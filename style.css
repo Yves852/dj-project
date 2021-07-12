@@ -100,6 +100,7 @@ header a {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
+    color: white;
     /* Positionings content with flex */
     display: flex;
     flex-direction: row;
@@ -110,7 +111,6 @@ header a {
 
 /* Effects on all elements directly children of the class */
 .header__menu>* {
-    margin-right: 20px;
     font-size: larger;
     font-weight: bolder;
 }
@@ -130,8 +130,6 @@ header a {
     /* Remove apparent background and border */
     background-color: transparent;
     border: none;
-    /* Text color */
-    color: white;
     /* Center vertically */
     align-self: center;
     /* margin-left auto will push this flexed element fully to the right */
@@ -143,12 +141,32 @@ header a {
     /* svg size */    
     width: auto;
     height: 2em;
-    color: white;
 }
 
 /* Angerone's logo */
 #header-logo {
     display: inline-block;
+}
+
+#header-logo>img {
+    max-height: 40px;
+    /*min-width: 40px; */
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+#header__a--pages-menu>img,
+#header__a--social-menu>svg {
+    max-height: 30px;
+}
+
+#header-logo, 
+#header-pages-wrap,
+#header-social-wrap {
+    width: auto;
+    /* Center vertically */
+    align-self: center;  
 }
 
 /* Hamburger menu */
@@ -161,18 +179,17 @@ header a {
     justify-content: space-evenly;
 }
 
-/* Common mobile styles */
-/* nav menu  */
-#header-pages-wrap {
-    color: #8121e0;
-    /* transition: transform .4s cubic-bezier(.25, .1, .25, 1); */
-    /* Center vertically */
-    align-self: center;  
-}
-
 /* Shown and effective when screen is 1024px or below */
 @media only screen and (max-width: 1024px) {
-    
+    #header__ul--pages {
+        font-size: small;
+    }
+
+    #header-social-wrap {
+        font-size: x-large;
+    }
+
+
     /* Change #wrap bloc size and display when menu is not clicked*/
     #header-pages-wrap:not(:target)  {
         /*transform: translate3d(-335px, 0, 0);*/
@@ -220,10 +237,6 @@ header a {
     #header__a--social-close 
     */ 
     .header__a--menu {
-        color: white;
-        height: 44px;
-        min-width: 40px;
-        text-align: center;
         /* Flex */
         display: flex;
         flex-direction: column;
