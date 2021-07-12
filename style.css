@@ -71,6 +71,7 @@ p {
 /* Header style */
 /* ************ */
 /* NB : mobile first */
+/* Image for all pages except index that have its dedicaced css file */
 header {
     background-image: url("./images/banner-img.jpg");
     text-transform: uppercase;
