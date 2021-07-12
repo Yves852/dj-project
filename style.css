@@ -143,44 +143,61 @@ header a {
     justify-content: space-around;
 }
 
+/* Common mobile styles */
+/* nav menu  */
+#header-pages-wrap {
+    /* font-family: sans-serif; */
+    /*font-size: 21px;*/
+    /*line-height: 1.6;*/
+    /*margin: 0;*/
+    /*display: flex;*/
+    color: #8121e0;
+    transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+    /* Center vertically */
+    align-self: center;
+}
+
 /* Shown and effective when screen is 1024px or below */
 @media only screen and (max-width: 1024px) {
-    #header-wrap {
-        /* font-family: sans-serif; */
-        /*font-size: 21px;*/
-        /*line-height: 1.6;*/
-        /*margin: 0;*/
-        /*display: flex;*/
-        color: #8121e0;
-        transition: transform .4s cubic-bezier(.25, .1, .25, 1);
-        /* Center vertically */
-        align-self: center;
-    }
     
     /* Change #wrap bloc size and display when menu is not clicked*/
-    #header-wrap:not(:target)  {
+    #header-pages-wrap:not(:target)  {
         /*transform: translate3d(-335px, 0, 0);*/
         width: 50px; /* Restrict size so other elements come next to it */
         display: inline-block;
     }
     
-    /* Change #wrap when menu clicked */
-    #header-wrap:target {
+    /* This bloc make content disapear when menu unclicked*/
+    #header-pages-wrap:not(:target) #header__ul--menu-content,
+    #header-social-wrap:not(:target) #header__ul--social-content {
+        display: none;
+    }
+
+    /* Display pages menu when menu clicked */
+    #header-pages-wrap:target {
         /*transform: translate3d(0, 0, 0);*/
         width: 100%;
         display: flex;
         justify-content: space-evenly;
         margin-top: 40px;
     }
-    
-    /* This bloc make content disapear when menu unclicked*/
-    #header-wrap:not(:target) #header__ul--menu-content {
-        display: none;
+
+    /* Display links menu when clicked */
+    #header-social-wrap:target {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px; 
     }
     
     /* Styling buttons */
-    #header-hamburger-open,
-    #header__a--pages-close {
+    /* 
+    #header__a--pages-menu,
+    #header__a--pages-close,
+    #header__a--social-menu,
+    #header__a--social-close 
+    */ 
+    .header__a--menu {
         color: white;
         height: 44px;
         font-size: larger;
@@ -190,12 +207,15 @@ header a {
     }
     
     /* Buttons display conditions */
-    #header-wrap:target #header-hamburger-open,
-    #header-wrap:not(:target) #header__a--pages-close {
+    #header-pages-wrap:target #header__a--pages-menu,
+    #header-social-wrap:target #header__a--social-menu,
+    #header-pages-wrap:not(:target) #header__a--pages-close,
+    #header-social-wrap:not(:target) #header__a--social-close {
         display: none;
     }
     
-    #header-wrap:target #header-hamburger-open {
+    #header-pages-wrap:target #header__a--pages-menu 
+    #header-social-wrap:target #header__a--social-menu {
         display: none;
     }
 }
