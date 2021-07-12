@@ -513,7 +513,49 @@ p {
     height: auto;
 }
 
+/* Responsive */
+/* Tablet screen and below */
+@media only screen and (min-width:1024px) {
+    .about__section--music {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 
+    .about__article {
+        /* Forcing article title taking a whole row */
+        min-width: 100%;
+    }
+
+    .about__article--music {
+        /* Positioning music articles by 3 columns, 2 rows */
+        min-width: 33%;
+        max-width: 33%;
+        /* Content positioning */
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "img h3"
+            "img p";
+    }
+
+    .about__article--music img {
+        margin-right: 20px;
+        grid-area: img;
+    }
+
+    .about__article--music h3 {
+        grid-area: h3;
+    }
+
+    .about__article--music p {
+        grid-area: p;
+        margin: 0;
+    }
+}
 
 /* Sections ids, unique elements */
 
