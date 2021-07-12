@@ -73,47 +73,74 @@
             <p>Home • About us</p>
         </section>
     </header>
-    <section id="player">
-        <!--INSERT MEDIA LINK-->
-        <audio src="#" controls>
-            Your browser does not support the HTML element 'audio'. Download the file <a href="#">here</a>.
-        </audio>
-    </section>
-
-    <section id="countdown">
-        <!--INSERT CODE FOR COUNTDOWN FEATURE-->
-        <button class="purple">BUY TICKETS</button>
-    </section>
-
-    <section id="mainContent">
-        <main>
-            <article id="about">
-                <!--REPLACE LOREM IPSUM WITH REAL CONTENT-->
-                <img src="images/home-dj.jpg" alt="DJ Angerone picture on hompepage">
+    <main class="homepage">
+        <section class="player homepage__player">
+            <h1 class="player__heading heading heading--white">
+                New Single
+            </h1>
+            <h2 class="player__song">
+                Feel the Rythm
+            </h2>
+            <!--INSERT MEDIA LINK-->
+            <audio class="player__controls" src="#" controls>
+                Your browser does not support the HTML element 'audio'. Download the file <a href="#">here</a>.
+            </audio>
+        </section>
+        <section class="countdown homepage__countdown">
+            <div class="countdown__description">
                 <h1>
-                    About DJ Angerone
+                    Next Gig
                 </h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ullam.
+                    Tickets for my next event are already available.
                 </p>
-                <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eligendi.
-                </blockquote>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, voluptas.
-                </p>
+            </div>
+            <!--BONUS: WOULD BE NICE TO HAVE A REAL COUNTDONW CODE BELOW-->
+            <div class="countdown__timer timer">
+                <div class="timer__days">
+                    <h1>41</h1>
+                    <p>DAYS</p>
+                </div>
+                <div class="timer__hours">
+                    <h1>23</h1>
+                    <p>HOURS</p>
+                </div>
+                <div class="timer__minutes">
+                    <h1>58</h1>
+                    <p>MINUTES</p>
+                </div>
+            </div>
+            <button class="button button--purple countdown__button">BUY TICKETS</button>
+        </section>
+        <section class="homepage__articles">
+            <article class="homeAbout clearfix">
+                <img class="images homeAbout__image" src="images/home-dj.jpg" alt="DJ Angerone picture on hompepage">
+                <div class="homeAbout__description">
+                    <h1>
+                        About DJ Angerone
+                    </h1>
+                    <p>
+                        Mike Myers, professionally known as DJ Angerone, is internationally acclaimed Progressive House & Trance DJ & musician.
+                    </p>
+                    <blockquote>
+                        I try to experiment with various music genres in every track that I make. 
+                    </blockquote>
+                    <p>
+                        Since the beginning of his career in 2010, he has already release, 5 EPs on a range of waldwide known labels (Booster Records, DSTRCT Recordings etc.) and received a number of music awards. 
+                    </p>
+                </div>
             </article>
 
-            <article id="discography">
+            <article class="homeDisco">
                 <!--INSERT BACKGROUND IMAGE WITH CSS-->
-                <h1>
+                <h1 class="homeDisco__description">
                     Listen to the Latest Releases by DJ Angerone
                 </h1>
                 <!--INSERT PAGE LINK-->
-                <a href="#" target="_blank">VIEW DISCOGRAPHY</a>
+                <a href="#" target="_blank"><button class="button button--purple homeDisco__button">VIEW DISCOGRAPHY</button></a>
             </article>
 
-            <article id="albums">
+            <article class="homeAlbums clearfix">
                 <h1>
                     Latest Releases
                 </h1>
@@ -302,7 +329,7 @@
             </section>
             </article>
 
-            <article id="gallery">
+            <article id="gallery" class="clearfix">
                 <!--INSERT ALT TEXT FOR EACH GALLERY IMAGE-->
                 <img src="images/gallery-1.jpg" alt="#">
                 <img src="images/gallery-3.jpg" alt="#">
@@ -366,19 +393,19 @@
                     </div>
                 </section>
             </article>
-        </main>
-    </section>
-    <section id="newsletter">
-        <h1>
-            Subscribe to Stay Informed
-        </h1>
-        <form method="GET">
-            <input type="email" name="email_client" value="" placeholder="Your E-mail">
-            <button type="submit">
-                SUBSCRIBE
-            </button>
-        </form>
-    </section>
+        </section>
+        <section id="newsletter">
+            <h1>
+                Subscribe to Stay Informed
+            </h1>
+            <form method="GET">
+                <input type="email" name="email_client" value="" placeholder="Your E-mail">
+                <button type="submit">
+                    SUBSCRIBE
+                </button>
+            </form>
+        </section>
+    </main>
     <footer>
 
         <!-- WEBSITE LOGO -->

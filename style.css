@@ -14,24 +14,32 @@ body {
 main {
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    align-items:center;
 }
 
-h1, h2, h3 {
+section {
+    width:100%;
+}
+
+.heading--grey {
     color: #282828;
 }
 
+.heading--white {
+    color:white;
+}
+
 h1 {
-    font-size:100%;
+    /* font-size: TO BE CHOSEN FROM POPPINS STYLES */
     /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
 }
 
 h2 {
-    font-size:100%;
+    /* font-size: TO BE CHOSEN FROM POPPINS STYLES */
     /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
 }
 h3 {
-    font-size:100%;
+    /* font-size: TO BE CHOSEN FROM POPPINS STYLES */
     /* font-family: TO BE CHOSEN FROM POPPINS STYLES */
 }
 
@@ -40,19 +48,22 @@ p {
 }
 
 /* Buttons */
-.purple {
-    background-color: #8121e0;
+.button {
     font-weight:bold;
+}
+
+.button--purple {
+    background-color: #8121e0;
     color:white;
     border:#8121e0 1px solid;
 }
 
-.white {
+.button--white {
     background-color: white;
-    font-weight:bold;
     color:black;
     border: black 1px solid;
 }
+
 
 /* ******************************* */
 /* END - CSS common to the whole website */
@@ -426,3 +437,186 @@ p {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* START HOMEPAGE STYLES */
+/*************************/
+
+/* MOBILE-FIRST DESIGNS (I.E. TABLET AND DESKTOP RESPONSIVENESS TO BE SPECIFIED FURTHER WITH @MEDIA QUERIES*/
+.player {
+    /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
+    width:100%;
+    padding:1em;
+    display:flex;
+    flex-direction: column;
+    /* REMOVE BACKGROUND COLOR FOR FINAL VERSION !*/
+    /*BACKGROUND COLOR SET TO RED WITH 50% TRANSPARENCY TO MAKE .player__heading and .player__song white texts visible in static position*/
+    background-color: rgba(255, 0, 0, 0.5);
+    position:relative;
+    /* EXACT RELATIVE POSITION TO BE MEASURED ON DESIGN SCREENSHOT */
+    bottom:5em;
+}
+.player__heading {
+    color:white;
+}
+.player__song {
+    color:rgba(255, 255, 255,0);
+
+    -webkit-text-stroke: 0.5px white;
+    /* workaround in case webkit won't work.
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    */
+}
+
+.countdown {
+    /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
+    width:90%;
+    padding: 1.5em 1em;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    /* FIND BACKGROUND IMAGE AND INSERT URL
+    background-image:url(images/)
+    IN THE MEANTIME, BACKGROUND COLOR IS USED*/
+    background-color:#282828;
+    position:relative;
+    /* EXACT RELATIVE POSITION TO BE MEASURED ON DESIGN SCREENSHOT */
+    bottom:5em;
+    border-radius:10px;
+    text-align: center;
+}
+
+.countdown__timer {
+    /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
+    width:90%;
+    padding:1em;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.countdown__button {
+    /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
+    width:100%;
+    padding:2em;
+    font-size:150%;
+    border-radius:10px;
+}
+
+.countdown h1, .countdown p  {
+    /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
+    padding:0.5em;
+    color:white;
+}
+
+.countdown h1 {
+    font-size: 200%;
+}
+
+.homepage__articles {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    
+}
+
+.clearfix {
+    overflow:auto;
+}
+
+.homeAbout {
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.homeAbout__image {
+    margin: 0 0 1em 0;
+    border-radius:10px;
+}
+
+
+.homeDisco {
+    width:100%;
+    padding:5em;
+    background-image:url(images/homepage-latest-releases-background.jpg);
+    background-repeat: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeDisco__description {
+    width:100%;
+    padding:2em;
+    color:white;
+    font-size:150%;
+    text-align:center;
+}
+
+.homeDisco__button {
+    /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
+    width:100%;
+    padding:2em;
+    font-size:150%;
+    border-radius:10px;
+}
+
+/* RESPONSIVENESS TO TABLET WIDTH (480px < Width) */
+@media only screen and (min-width:481px) {
+
+    .homeAbout {
+        width:80%;
+        display:flex;
+        flex-direction: row;
+    }
+
+    .homeAbout__image {
+        margin: 0 1em 1em 0;
+    }
+}
+
+/* RESPONSIVENESS TO DESKTOP WIDTH (769px < Width) */
+@media only screen and (min-width:769px) {
+    .player {
+    /* EXACT WIDTH TO BE MEASURED ON DESIGN SCREENSHOT */
+        width:80%;
+    }
+
+    .countdown {
+        padding:2em;
+        width:80%;
+        display:grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        /* EXACT RELATIVE POSITION TO BE MEASURED ON DESIGN SCREENSHOT */
+        bottom:5em;
+    }
+
+    .homeAbout {
+        width:80%;
+        display:flex;
+        flex-direction: row;
+    }
+
+    .homeAbout__image {
+        margin: 0 1em 1em 0;
+    }
+
+}
+
+/* END HOMEPAGE STYLES */
+/*************************/
