@@ -104,7 +104,6 @@ header a {
     /* Positionings content with flex */
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     /* Allow elements to wrap, pushing logo and links menu to bottom of openned pages menu */
     flex-wrap: wrap;
 }
@@ -196,6 +195,10 @@ header a {
         width: 50px; /* Restrict size so other elements come next to it */
         display: inline-block;
     }
+
+    #header-social-wrap:not(:target) {
+        margin-left: auto;
+    }
     
     /* This bloc make content disapear when menu unclicked*/
     #header-pages-wrap:not(:target) #header__ul--pages,
@@ -261,13 +264,43 @@ header a {
 /* Responsive header */
 /* Desktop screen and above */
 @media only screen and (min-width: 1025px) {
-    .header-nav, #header__a--social-menu {
-        visibility: collapse;
+    .header__menu {
+        font-size: small;
+        justify-content: space-between;   
+        flex-wrap: nowrap;     
     }
 
-    .header-nav #header__ul--pages {
-        visibility: visible;
+    .header-nav {
+        display: flex;
+        width: auto;
     }
+
+    /* Hidding hamburger's buttons */
+    .header-nav, #header__a--social-menu {
+       visibility: hidden;
+    }
+
+    /* Showing hamburger's menus as normal menus */
+    #header__ul--pages, 
+    #header__ul--social {
+        visibility: visible;
+        justify-content: space-around;
+        width: auto;
+    }
+
+
+    #header__ul--pages {
+        min-width: 450px;
+    }
+
+    #header__ul--social {
+        min-width: 250px;
+    }
+
+    #header-logo {
+        /* Changing order to get logo first */
+        order: -1;
+    } 
 
     /* #header__ul--pages {
         display: inline;
