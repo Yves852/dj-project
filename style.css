@@ -58,6 +58,7 @@ p {
 /* END - CSS common to the whole website */
 
 /* Header style */
+/* ************ */
 /* NB : mobile first */
 header {
     background-image: url("./images/banner-img.jpg");
@@ -88,14 +89,19 @@ header a {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
+    /* Positionings content with flex */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    /* Allow elements to wrap, pushing logo and links menu to bottom of openned pages menu */
+    flex-wrap: wrap;
 }
 
 /* Effects on all elements directly children of the class */
 .header__menu>* {
     margin-right: 20px;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 /* Refer to hn and p showing as head of the pages, not litteral hn headings */
@@ -138,23 +144,19 @@ header a {
 /* Source : https://codepen.io/benoitwimart/pen/ORPmrg/ */
     
 /* ul with links */
-#header__ul--menu-content {
+#header__ul--menu-content {    
+    /* Flex */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 /* Common mobile styles */
 /* nav menu  */
 #header-pages-wrap {
-    /* font-family: sans-serif; */
-    /*font-size: 21px;*/
-    /*line-height: 1.6;*/
-    /*margin: 0;*/
-    /*display: flex;*/
     color: #8121e0;
-    transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+    /* transition: transform .4s cubic-bezier(.25, .1, .25, 1); */
     /* Center vertically */
-    align-self: center;
+    align-self: center;  
 }
 
 /* Shown and effective when screen is 1024px or below */
@@ -177,9 +179,19 @@ header a {
     #header-pages-wrap:target {
         /*transform: translate3d(0, 0, 0);*/
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
         margin-top: 40px;
+        flex-shrink: 0;
+        /* Flex positioning content */
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #header-pages-wrap:target>#header__ul--menu-content {
+        width: 100%;
+    }
+
+    #header-pages-wrap:target>#header__a--pages-close {
+        /* width: 40px; */
     }
 
     /* Display links menu when clicked */
@@ -200,10 +212,12 @@ header a {
     .header__a--menu {
         color: white;
         height: 44px;
-        font-size: larger;
-        /*text-align: right;*/
-        /* display: block; */
-        /*margin-right: -30px;*/
+        min-width: 40px;
+        text-align: center;
+        /* Flex */
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
     }
     
     /* Buttons display conditions */
