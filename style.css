@@ -100,17 +100,16 @@ header a {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
+    color: white;
     /* Positionings content with flex */
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     /* Allow elements to wrap, pushing logo and links menu to bottom of openned pages menu */
     flex-wrap: wrap;
 }
 
 /* Effects on all elements directly children of the class */
 .header__menu>* {
-    margin-right: 20px;
     font-size: larger;
     font-weight: bolder;
 }
@@ -130,8 +129,6 @@ header a {
     /* Remove apparent background and border */
     background-color: transparent;
     border: none;
-    /* Text color */
-    color: white;
     /* Center vertically */
     align-self: center;
     /* margin-left auto will push this flexed element fully to the right */
@@ -143,12 +140,32 @@ header a {
     /* svg size */    
     width: auto;
     height: 2em;
-    color: white;
 }
 
 /* Angerone's logo */
 #header-logo {
     display: inline-block;
+}
+
+#header-logo>img {
+    max-height: 40px;
+    /*min-width: 40px; */
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+#header__a--pages-menu>img,
+#header__a--social-menu>svg {
+    max-height: 30px;
+}
+
+#header-logo, 
+#header-pages-wrap,
+#header-social-wrap {
+    width: auto;
+    /* Center vertically */
+    align-self: center;  
 }
 
 /* Hamburger menu */
@@ -161,23 +178,26 @@ header a {
     justify-content: space-evenly;
 }
 
-/* Common mobile styles */
-/* nav menu  */
-#header-pages-wrap {
-    color: #8121e0;
-    /* transition: transform .4s cubic-bezier(.25, .1, .25, 1); */
-    /* Center vertically */
-    align-self: center;  
-}
-
 /* Shown and effective when screen is 1024px or below */
 @media only screen and (max-width: 1024px) {
-    
+    #header__ul--pages {
+        font-size: small;
+    }
+
+    #header-social-wrap {
+        font-size: x-large;
+    }
+
+
     /* Change #wrap bloc size and display when menu is not clicked*/
     #header-pages-wrap:not(:target)  {
         /*transform: translate3d(-335px, 0, 0);*/
         width: 50px; /* Restrict size so other elements come next to it */
         display: inline-block;
+    }
+
+    #header-social-wrap:not(:target) {
+        margin-left: auto;
     }
     
     /* This bloc make content disapear when menu unclicked*/
@@ -220,10 +240,6 @@ header a {
     #header__a--social-close 
     */ 
     .header__a--menu {
-        color: white;
-        height: 44px;
-        min-width: 40px;
-        text-align: center;
         /* Flex */
         display: flex;
         flex-direction: column;
@@ -248,13 +264,43 @@ header a {
 /* Responsive header */
 /* Desktop screen and above */
 @media only screen and (min-width: 1025px) {
-    .header-nav, #header__a--social-menu {
-        visibility: collapse;
+    .header__menu {
+        font-size: small;
+        justify-content: space-between;   
+        flex-wrap: nowrap;     
     }
 
-    .header-nav #header__ul--pages {
-        visibility: visible;
+    .header-nav {
+        display: flex;
+        width: auto;
     }
+
+    /* Hidding hamburger's buttons */
+    .header-nav, #header__a--social-menu {
+       visibility: hidden;
+    }
+
+    /* Showing hamburger's menus as normal menus */
+    #header__ul--pages, 
+    #header__ul--social {
+        visibility: visible;
+        justify-content: space-around;
+        width: auto;
+    }
+
+
+    #header__ul--pages {
+        min-width: 450px;
+    }
+
+    #header__ul--social {
+        min-width: 250px;
+    }
+
+    #header-logo {
+        /* Changing order to get logo first */
+        order: -1;
+    } 
 
     /* #header__ul--pages {
         display: inline;
