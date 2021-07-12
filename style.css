@@ -109,7 +109,7 @@ header a {
 }
 
 /* Second hamburger menu */
-.header__sub-menu {
+.header__social-menu {
     /* Remove apparent background and border */
     background-color: transparent;
     border: none;
@@ -138,14 +138,14 @@ header a {
 /* Source : https://codepen.io/benoitwimart/pen/ORPmrg/ */
     
 /* ul with links */
-#menu-content {
+#header__ul--menu-content {
     display: flex;
     justify-content: space-around;
 }
 
 /* Shown and effective when screen is 1024px or below */
 @media only screen and (max-width: 1024px) {
-    #wrap {
+    #header-wrap {
         /* font-family: sans-serif; */
         /*font-size: 21px;*/
         /*line-height: 1.6;*/
@@ -158,14 +158,14 @@ header a {
     }
     
     /* Change #wrap bloc size and display when menu is not clicked*/
-    #wrap:not(:target)  {
+    #header-wrap:not(:target)  {
         /*transform: translate3d(-335px, 0, 0);*/
         width: 50px; /* Restrict size so other elements come next to it */
         display: inline-block;
     }
     
     /* Change #wrap when menu clicked */
-    #wrap:target {
+    #header-wrap:target {
         /*transform: translate3d(0, 0, 0);*/
         width: 100%;
         display: flex;
@@ -174,13 +174,13 @@ header a {
     }
     
     /* This bloc make content disapear when menu unclicked*/
-    #wrap:not(:target) #menu-content {
+    #header-wrap:not(:target) #header__ul--menu-content {
         display: none;
     }
     
     /* Styling buttons */
     #header-hamburger-open,
-    #header-hamburger-close {
+    #header__a--pages-close {
         color: white;
         height: 44px;
         font-size: larger;
@@ -190,12 +190,12 @@ header a {
     }
     
     /* Buttons display conditions */
-    #wrap:target #header-hamburger-open,
-    #wrap:not(:target) #header-hamburger-close {
+    #header-wrap:target #header-hamburger-open,
+    #header-wrap:not(:target) #header__a--pages-close {
         display: none;
     }
     
-    #wrap:target #header-hamburger-open {
+    #header-wrap:target #header-hamburger-open {
         display: none;
     }
 }
@@ -204,15 +204,15 @@ header a {
 /* Responsive header */
 /* Desktop screen and above */
 @media only screen and (min-width: 1025px) {
-    .header-nav {
+    .header-nav, #header__a--social-menu {
         visibility: collapse;
     }
 
-    .header-nav #menu-content {
+    .header-nav #header__ul--menu-content {
         visibility: visible;
     }
 
-    /* #menu-content {
+    /* #header__ul--menu-content {
         display: inline;
     } */
 }
