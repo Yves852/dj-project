@@ -575,6 +575,31 @@ p {
         grid-area: p;
         margin: 0;
     }
+
+    /* About latest section */
+    .about__section--latest {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .about__h1--latest, .about__p--latest {
+        min-width: 80%;
+    }
+
+    .about__article--latest {
+        display: inline-block;
+    }
+
+    .about__article--latest, .about__article--latest figure {
+        width: 20%;
+        height: auto;
+    }
+
+    /* .about__article--latest img {
+        width: 50%;
+    } */
 }
 
 /* Sections ids, unique elements */
