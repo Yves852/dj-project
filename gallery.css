@@ -24,18 +24,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
+    background-color: white;
+    /* border: 15px solid rbga(255 255 255 .5); */
+    color: black;
     font-size: 16px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 50%;
     opacity: 0;
-    width: 10em;
-    height: 10em;
+    width: 6em;
+    height: 6em;
 }
 
-.button:hover {
+
+article:hover button{
     opacity: 100;
 }
