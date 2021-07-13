@@ -572,16 +572,8 @@ p {
 
 .tour__section--calendar {
     padding: 20px;
-    /* Calendar grid */
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% min-content;
-    grid-template-areas: 
-        "pattern article"
-        "pattern article"
-        "pattern article"
-        "pattern article"
-        "pattern article";
+    grid-template-columns: repeat(2, auto);
 }
 
 .tour__section--calendar a {
@@ -591,34 +583,14 @@ p {
 .tour__calendar__article {
     margin-top: 20px;
     margin-bottom: 20px;
-    grid-area: article;
 }
 
 .tour__calendar__article *{
     margin: 10px;
 }
 
-/* .tour__calendar__article--row2 {
+.tour__calendar__article--row2 {
     grid-column: 2;
-} */
-
-.tour__calendar--pattern {
-    height: 20%;
-    grid-area: pattern;
-}
-
-.tour--calendar-circle1 {
-    width: 25px;
-    height: auto;
-    border-radius: 50%;
-    background-color: blueviolet;
-}
-
-.tour--calendar-circle2 {
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-    border: 1px solid black;
 }
 
 /* Responsive */
