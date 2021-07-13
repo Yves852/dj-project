@@ -389,12 +389,6 @@ html {
 }
 
 
-/* FOOTER COPYRIGHT */
-
-p {
-    color: #444444;
-}
-
 /* FOOTER MEDIA QUERIES */
 
 @media only screen and (max-width: 768px){
