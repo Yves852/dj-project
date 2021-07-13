@@ -935,12 +935,13 @@ blockquote {
     width:100%;
     margin:auto;
     display:flex;
+    flex-direction:column;
     flex-wrap: wrap;
     justify-content:center;
+    align-items: center;
 }
 
 .releaseAlbums__album {
-    width:90%;
     margin:auto;
     padding:1em;
     text-align: center;
@@ -1156,6 +1157,11 @@ blockquote {
 
     .homeAbout__image {
         margin: 0 1em 1em 0;
+    }
+
+    .homeReleases__albums {
+        flex-direction:row;
+        flex-wrap: wrap;
     }
 
     .homeFanbase__gallery {
