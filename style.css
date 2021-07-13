@@ -761,6 +761,11 @@ html {
     height: 6em;
 }
 
+
+.gallery__article:hover button{
+    opacity: 100;
+}
+
 /* DISCOGRAPHY STYLE */
 
 .grid {
