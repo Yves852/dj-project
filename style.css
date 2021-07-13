@@ -11,14 +11,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.homeHeader {
+    min-height: 800px;
+    background-image: url("./images/homapage-banner-img.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
 main {
     display:flex;
     flex-direction:column;
     align-items:center;
-}
-
-section {
-    width:100%;
 }
 
 .heading--grey {
@@ -798,6 +801,196 @@ p {
     border-radius:10px;
 }
 
+.homeReleases {
+    width:100%;
+}
+.homeReleases__description {
+    width:100%;
+    padding:2em;
+    text-align: center;
+}
+
+.homeReleases__albums {
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.relaseAlbums__album {
+    padding:1em;
+    text-align: center;
+    
+}
+.homeFanbase {
+    width:100%;
+    padding:2em;
+    /* FIND BACKGROUND IMAGE AND INSERT URL
+    background-image:url(images/)
+    IN THE MEANTIME, BACKGROUND COLOR IS USED*/
+    background-color:#282828;
+}
+
+.homeFanbase__gallery {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.homeFanbase__benefits {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fanbaseGallery__image {
+    border-radius:10px;
+}
+
+.fanbaseBenefits__list {
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.benefitList__element {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+}
+
+
+.homePartners {
+    width:100%;
+    min-height: 20em;
+    padding:2em;
+    background-image: url(images/homepage-sponsors-background.jpg);
+    background-repeat: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.homePartners__list {
+	overflow: hidden;
+}
+
+.partnersList__slider {
+    display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+    justify-content: center;
+    transition: transform 0.7s ease-in-out;
+}
+
+.partnerList__slider {
+    transform:translate(-100px);
+}
+
+.partnersList__item {
+	width: 100%;
+	flex-shrink: 0;
+}
+
+.homeTickets {
+    width:100%;
+    overflow:hidden;
+
+}
+.homeTickets__grid {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    transition: transform 0.7s ease-in-out;
+}
+.homeTickets__grid:hover {
+    transform:translate(50%);
+}
+
+.ticketGrid__item {
+    text-align: center;
+    padding:2em;
+}
+
+.homeGallery {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content: center;
+}
+
+.homeGallery_image {
+    width:100%;
+}
+
+.homeNews {
+    width:100%;
+    padding:2em;
+    overflow:hidden;
+    
+}
+.homeNews__heading {
+    text-align:center;
+}
+
+.homeNews__list {
+    width:100%;
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.newsList__item {
+    padding:2em;
+}
+.newsList__item--grey {
+    color: #282828;
+}
+
+.newsList__item--white {
+    color:white;
+    border-radius: 10px;
+    background-image:url(images/homepage-news-background.jpg);
+    background-repeat: no-repeat;
+}
+
+.newsList__date {
+    display:inline-block;
+    border-radius:5px;
+    padding:0.5em 1em;
+    color:white;
+    background-color:#8121e0;
+}
+
+.homeNewsletter {
+    width:100%;
+    padding:2em;
+    text-align: center;
+    background-image:url(images/homepage-footer-background.jpg);
+    background-repeat: no-repeat;
+
+}
+.homeNewsletter__form {
+    width:100%;
+    padding:2em;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newsletterForm__input, .newsletterForm__button {
+    padding:2em;
+    border-radius: 10px;
+}
+
+
 /* RESPONSIVENESS TO TABLET WIDTH (480px < Width) */
 @media only screen and (min-width:481px) {
 
@@ -810,6 +1003,32 @@ p {
     .homeAbout__image {
         margin: 0 1em 1em 0;
     }
+
+    .homeFanbase__gallery {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .benefitList__element {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .homeGallery {
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    
+    .homeGallery_image {
+        width:auto;
+        flex:auto auto auto;
+    }
+
+    .homeNewsletter__form {
+        width:70%;
+        flex-direction: row;
+
+
 }
 
 /* RESPONSIVENESS TO DESKTOP WIDTH (769px < Width) */
@@ -837,6 +1056,24 @@ p {
     .homeAbout__image {
         margin: 0 1em 1em 0;
     }
+
+    .homeFanbase {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fanbaseBenefits__list {
+        flex-direction: column;
+        flex-wrap:nowrap;
+
+    }
+
+    .homeNews__list {
+        width:80%;
+    }
+
+    .homeNewsletter__form {
+        width:50%;
 
 }
 

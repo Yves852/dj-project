@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="homeHeader">
         <section class="header__menu">
             <nav class="header-nav" id="header-pages-wrap">
                 <!-- Drawing of the menu button -->
@@ -113,7 +113,7 @@
         </section>
         <section class="homepage__articles">
             <article class="homeAbout clearfix">
-                <img class="images homeAbout__image" src="images/home-dj.jpg" alt="DJ Angerone picture on hompepage">
+                <img class="homeAbout__image" src="images/home-dj.jpg" alt="DJ Angerone picture on hompepage">
                 <div class="homeAbout__description">
                     <h1>
                         About DJ Angerone
@@ -139,16 +139,17 @@
                 <a href="#" target="_blank"><button class="button button--purple homeDisco__button">VIEW DISCOGRAPHY</button></a>
             </article>
 
-            <article class="homeAlbums clearfix">
-                <h1>
-                    Latest Releases
-                </h1>
-                <p>
-                    <!--REPLACE LOREM IPSUM WITH REAL CONTENT-->
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, vitae!
-                </p>
-                <section id="albumGrid">
-                    <div id="album1" class="album">
+            <article class="homeReleases">
+                <div class="homeReleases__description">
+                    <h1>
+                        Latest Releases
+                    </h1>
+                    <p>
+                        Here are the most recent singles, EPs, and other releases that DJ Angerone has worked on. You can stream and buy them on our website and a variety of digital stores.
+                    </p>
+                </div>
+                <div class="homeReleases__albums releaseAlbums">
+                    <div class="releaseAlbums__album">
                         <!--INSERT PAGE LINK-->
                         <a href="#" target="_blank"><img src="images/dicography-album-cover-1.jpg" alt="Album 1: Intense - 2019"></a>
                         <h1>
@@ -158,7 +159,7 @@
                             2019
                         </p>
                     </div>
-                    <div id="album2" class="album">
+                    <div class="releaseAlbums__album">
                         <a href="#" target="_blank"><img src="images/dicography-album-cover-2.jpg" alt="Album 2: My Space - 2019"></a>
                         <h1>
                             My Space
@@ -167,7 +168,7 @@
                             2019
                         </p>
                     </div>
-                    <div id="album3" class="album">
+                    <div class="releaseAlbum__album">
                         <a href="#" target="_blank"><img src="images/dicography-album-cover-3.jpg" alt="Album 3: Trance Year Mix - 2018"></a>
                         <h1>
                             Trance Year Mix
@@ -176,233 +177,247 @@
                             2018
                         </p>
                     </div>
-                </section>
+                </div>
             </article>
 
-            <article id="fanbase">
-                <section id="photosMozaic">
+            <article class="homeFanbase">
+                <div class="homeFanbase__gallery fanbaseGallery">
                     <!--INSERT ALT TEXT FOR EACH FANBASE IMAGE-->
-                    <img src="images/fanbase-1.jpg" alt="#">
-                    <img src="images/fanbase-2.jpg" alt="#">
-                    <img src="images/about-us-dj-img.jpg" alt="">
-                    <img src="images/fanbase-3.jpg" alt="#">
-                    <img src="images/fanbase-5.jpg" alt="#">
-                    <img src="images/fanbase-6.jpg" alt="#">
-                </section>
-                <section id="fanbaseBenefits">
-                    <h1>
-                        Join the Fanbase
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, modi.
-                    </p>
-                    <div class="benefit">
-                        <img>
-                        <!--ADD ICON-->
-                        </img>
-                        <h2>
-                            Exclusive Releases
-                        </h2>
-                        <p>
-                            <!--REPLACE LOREM IPSUM-->
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ad?
+                    <img class="fanbaseGallery__image" src="images/fanbase-1.jpg" alt="#">
+                    <img class="fanbaseGallery__image" src="images/fanbase-2.jpg" alt="#">
+                    <img class="fanbaseGallery__image" src="images/about-us-dj-img.jpg" alt="">
+                    <img class="fanbaseGallery__image" src="images/fanbase-3.jpg" alt="#">
+                    <img class="fanbaseGallery__image" src="images/fanbase-5.jpg" alt="#">
+                    <img class="fanbaseGallery__image" src="images/fanbase-6.jpg" alt="#">
+                </div>
+                <div class="homeFanbase__benefits fanbaseBenefits">
+                    <div class="fanbaseBenefits__description">
+                        <h1 class="heading--white">
+                            Join the Fanbase
+                        </h1>
+                        <p class="paragraph--white">
+                            Take your chance to join DJ Angerone's fan club to receive exclusive tracks, free downloads, and other great offers.
                         </p>
                     </div>
-                    <div class="benefit">
-                        <img>
-                        <!--ADD ICON-->
-                        </img>
-                        <h2>
-                            Full DJ Sets & Podcasts
-                        </h2>
-                        <p>
-                            <!--REPLACE LOREM IPSUM-->
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, doloremque.
-                        </p>
-                    </div>
-                    <div class="benefit">
-                        <img>
-                        <!--ADD ICON-->
-                        </img>
-                        <h2>
-                            Free Downloads
-                        </h2>
-                        <p>
-                            <!--REPLACE LOREM IPSUM-->
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, blanditiis.
-                        </p>
+                    <div class="fanbaseBenefits__list benefitList">
+                        <div class="benefitList__element listElement">
+                            <img class="listElement__icon">
+                                <!-- ADD ICON + LINK -->
+                            </img>
+                            <div class="listElement__detail">
+                                <h2 class="heading--white">
+                                    Exclusive Releases
+                                </h2>
+                                <p class="paragraph--white">
+                                    Get access to unreleased albums and EPs before they are published.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefitList__element listElement">
+                            <img class="listElement__icon">
+                                <!-- ADD ICON + LINK -->
+                            </img>
+                            <div class="listElement__detail">
+                                <h2 class="heading--white">
+                                    Full DJ Sets & Podcasts
+                                </h2>
+                                <p class="paragraph--white">
+                                    Listen and download full sets and podcasts with tracklists by DJ Angerone.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefitList__element listElement">
+                            <img class="listElement__icon">
+                                <!-- ADD ICON + LINK -->
+                            </img>
+                            <div  class="listElement__detail">
+                                <h2 class="heading--white">
+                                Free Downloads
+                                </h2>
+                                <p class="paragraph--white">
+                                Free tracks and remixes are regularly published for DJ Angerone's fan club.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </article>
 
-            <article id="schedule">
+            <article class="homeSchedule">
                 <h1>
                     Tour Schedule
                 </h1>
                 <section id="scheduleContainer">
-                    <!-- INSERT CODE FOR SCHEDULE CONTAINER-->
+                    <!-- INSERT CODE FOR SCHEDULE CONTAINER FROM TOUR-SCHEDULE.HTML PAGE -->
                 </section>
             </article>
 
-            <article id="partners">
-                <h1>
+            <article class="homePartners">
+                <h1 class="homePartners__heading heading--white">
                     Partners & Sponsors
                 </h1>
-                <section id="partnersList">
-                    <!-- INSERT CODE FOR PARTNERS SLIDE LIST CONTAINER-->
+                <section class="homePartners__list partnersList">
+                    <div class="partnersList__slider">
+                        <div class="partnersList__item" >Item 1</div>
+                        <div class="partnersList__item" >Item 2</div>
+                        <div class="partnersList__item" >Item 3</div>
+                        <div class="partnersList__item" >Item 4</div>
+                    </div>
                 </section>
-            </article id="tickets">
-            <h1>
-                Tickets
-            </h1>
-            <section id="ticketsGrid">
-                <div class="ticket">
-                    <h2>
-                        BASIC
-                    </h2>
-                    <p>$</p>
-                    <p>50</p>
-                    <ul>
-                        <!--FILL IN TICKET DETAILS IN UNORDERED LIST ITEMS-->
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                    </ul>
-                    <a href="#" target="_blank"><button class="white">BUY NOW</button></a>
-                </div>
-                <div class="ticket">
-                    <h2>
-                        STANDARD
-                    </h2>
-                    <p>$</p>
-                    <p>80</p>
-                    <ul>
-                        <!--FILL IN TICKET DETAILS IN UNORDERED LIST ITEMS-->
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                    </ul>
-                    <a href="#" target="_blank"><button class="purple">BUY NOW</button></a>
-                </div>
-                <div class="ticket">
-                    <h2>
-                        GOLD
-                    </h2>
-                    <p>$</p>
-                    <p>120</p>
-                    <ul>
-                        <!--FILL IN TICKET DETAILS IN UNORDERED LIST ITEMS-->
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                        <li>
-                            Lorem, ipsum dolor.
-                        </li>
-                    </ul>
-                    <a href="#" target="_blank"><button class="white">BUY NOW</button></a>
-                </div>
-            </section>
-            </article>
-
-            <article id="gallery" class="clearfix">
-                <!--INSERT ALT TEXT FOR EACH GALLERY IMAGE-->
-                <img src="images/gallery-1.jpg" alt="#">
-                <img src="images/gallery-3.jpg" alt="#">
-                <img src="images/gallery-2.jpg" alt="#">
-                <img src="images/gallery-4.jpg" alt="#">
-                <img src="images/gallery-5.jpg" alt="#">
-            </article>
-
-            <article id="news">
+                <button class="homePartners__button"> &nbsp; &bull; &nbsp; &bull; &nbsp; &bull; &nbsp; </button>
+            </article class="homeTickets">
                 <h1>
+                    Tickets
+                </h1>
+                <section class="homeTickets__grid ticketGrid">
+                    <div class="ticketGrid__item">
+                        <h2>
+                            BASIC
+                        </h2>
+                        <p>$ <span>50</span></p>
+                        <ul>
+                            <li>
+                                1 Event
+                            </li>
+                            <li>
+                                Basic Access
+                            </li>
+                            <li>
+                                Club Events Only
+                            </li>
+                            <li>
+                                Free Snacks
+                            </li>
+                        </ul>
+                        <a href="#" target="_blank"><button class="ticketGrid__button button button--white">BUY NOW</button></a>
+                    </div>
+                    <div class="ticketGrid__item">
+                        <h2>
+                            STANDARD
+                        </h2>
+                        <p>$ <span>80</span></p>
+                        <ul>
+                            <li>
+                                3 Events
+                            </li>
+                            <li>
+                                Extended Access
+                            </li>
+                            <li>
+                                Club & Beach Events
+                            </li>
+                            <li>
+                                Free Snacks & Merch
+                            </li>
+                        </ul>
+                        <a href="#" target="_blank"><button class="ticketGrid__button button button--purple">BUY NOW</button></a>
+                    </div>
+                    <div class="ticketGrid__item">
+                        <h2>
+                            GOLD
+                        </h2>
+                        <p>$ <span>120</span></p>
+                        <ul>
+                            <li>
+                                5+ Events
+                            </li>
+                            <li>
+                                Unlimited Access
+                            </li>
+                            <li>
+                                All Events
+                            </li>
+                            <li>
+                                Free Accommodation
+                            </li>
+                        </ul>
+                        <a href="#" target="_blank"><button class="ticketGrid__button button button--white">BUY NOW</button></a>
+                    </div>
+                </section>
+            </article>
+
+            <article class="homeGallery">
+                <!--INSERT ALT TEXT FOR EACH GALLERY IMAGE-->
+                <img class="homeGallery_image" src="images/gallery-1.jpg" alt="#">
+                <img class="homeGallery_image" src="images/gallery-3.jpg" alt="#">
+                <img class="homeGallery_image" src="images/gallery-2.jpg" alt="#">
+                <img class="homeGallery_image" src="images/gallery-4.jpg" alt="#">
+                <img class="homeGallery_image" src="images/gallery-5.jpg" alt="#">
+            </article>
+
+            <article class="homeNews">
+                <h1 class="homeNews__heading">
                     Recent News
                 </h1>
-                <section id="newsList">
-                    <div id="news1" class="news">
-                        <p>
-                            <strong><em>
-                                JUN 02, 2019
-                            </em></strong>
-                        </p>
-                        <!-- REPLACE LOREM IPSUM-->
-                        <h1>
-                            Lorem, ipsum dolor.
+                <br>
+                <section class  ="homeNews__list newsList">
+                    <div class="newsList__item newsList__item--grey">
+                        <span class="newsList__date">
+                            <strong>JUN 02, 2019</strong>
+                        </span>
+                        <br>
+                        <br>
+                        <h1 class="heading--grey">
+                            New Single "Feel the Rhythm" is Already Available !
                         </h1>
+                        <br>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, veritatis.
+                            DJ Angerone's new single "Feel the Rhythm" is already released via Divergence Records and it's now available for streaming and downloading...
                         </p>
+                        <br>
+                        <!--ADD HREF and ADD ICON AFTER "READ MORE"-->
+                        <a href="#" target="_blank" class="newsList__item--grey">Read more <img src="#"></img></a>
+                    </div>
+                    <div class="newsList__item newsList__item--white">
+                        <span class="newsList__date">
+                            <strong>JUL 09, 2019</strong>
+                        </span>
+                        <br>
+                        <br>
+                        <h1 class="heading--white">
+                            3 New Tour Locations Announced
+                        </h1>
+                        <br>
+                        <p class="paragraph--white">
+                            We are glad to share with you the recent information about three new locations of DJ Angerone's "Subliminal Tour". Now you can...
+                        </p>
+                        <br>
                         <!--ADD HREF and ADD ICON AFTER "READ MORE"-->
                         <a href="#" target="_blank">Read more <img src="#"></img></a>
                     </div>
-                    <div id="news2" class="news">
-                        <p>
-                            <strong><em>
-                                JUL 02, 2019
-                            </em></strong>
-                        </p>
-                        <!-- REPLACE LOREM IPSUM-->
-                        <h1>
-                            Lorem, ipsum dolor.
+                    <div class="newsList__item newsList__item--grey">
+                        <span class="newsList__date">
+                            <strong>AUG 02, 2019</strong>
+                        </span>
+                        <br>
+                        <br>
+                        <h1 class="heading--grey">
+                            Top 10 Remixes and Collaborations by DJ Angerone
                         </h1>
+                        <br>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, veritatis.
+                            As one of the most prominent House/Trance DJs and musicians, DJ Angerone has released a lot of great tracks. But what do you know about his...
                         </p>
+                        <br>
                         <!--ADD HREF and ADD ICON AFTER "READ MORE"-->
-                        <a href="#" target="_blank">Read more <img src="#"></img></a>
-                    </div>
-                    <div id="news3" class="news">
-                        <p>
-                            <strong><em>
-                                AUG 02, 2019
-                            </em></strong>
-                        </p>
-                        <!-- REPLACE LOREM IPSUM-->
-                        <h1>
-                            Lorem, ipsum dolor.
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, veritatis.
-                        </p>
-                        <!--ADD HREF and ADD ICON AFTER "READ MORE"-->
-                        <a href="#" target="_blank">Read more <img src="#"></img></a>
+                        <a href="#" target="_blank" class="newsList__item--grey">Read more <img src="#"></img></a>
                     </div>
                 </section>
             </article>
         </section>
-        <section id="newsletter">
-            <h1>
+        <section class="homeNewsletter">
+            <h1 class="heading--white">
                 Subscribe to Stay Informed
             </h1>
-            <form method="GET">
-                <input type="email" name="email_client" value="" placeholder="Your E-mail">
-                <button type="submit">
-                    SUBSCRIBE
-                </button>
-            </form>
+            <div class="homeNewsletter__form newsletterForm">
+                <form method="GET">
+                    <input class="newsletterForm__input" type="email" name="email_client" value="" placeholder="Your E-mail">
+                    <br>
+                    <button class="newsletterForm__button button--purple" type="submit">
+                        SUBSCRIBE
+                    </button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
