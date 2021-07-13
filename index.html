@@ -112,7 +112,7 @@
             <button class="button button--purple countdown__button">BUY TICKETS</button>
         </section>
         <section class="homepage__articles">
-            <article class="homeAbout clearfix">
+            <article class="homeAbout">
                 <img class="homeAbout__image" src="images/home-dj.jpg" alt="DJ Angerone picture on hompepage">
                 <div class="homeAbout__description">
                     <h1>
@@ -121,12 +121,15 @@
                     <p>
                         Mike Myers, professionally known as DJ Angerone, is internationally acclaimed Progressive House & Trance DJ & musician.
                     </p>
+                    <br>
                     <blockquote>
                         I try to experiment with various music genres in every track that I make. 
                     </blockquote>
+                    <br>
                     <p>
                         Since the beginning of his career in 2010, he has already release, 5 EPs on a range of waldwide known labels (Booster Records, DSTRCT Recordings etc.) and received a number of music awards. 
                     </p>
+                    <br>
                 </div>
             </article>
 
@@ -151,7 +154,7 @@
                 <div class="homeReleases__albums releaseAlbums">
                     <div class="releaseAlbums__album">
                         <!--INSERT PAGE LINK-->
-                        <a href="#" target="_blank"><img src="images/dicography-album-cover-1.jpg" alt="Album 1: Intense - 2019"></a>
+                        <a href="discography.html" target="_blank"><img class="releaseAlbums__album--border" src="images/dicography-album-cover-1.jpg" alt="Album 1: Intense - 2019"></a>
                         <h1>
                             Intense
                         </h1>
@@ -160,7 +163,7 @@
                         </p>
                     </div>
                     <div class="releaseAlbums__album">
-                        <a href="#" target="_blank"><img src="images/dicography-album-cover-2.jpg" alt="Album 2: My Space - 2019"></a>
+                        <a href="discography.html" target="_blank"><img class="releaseAlbums__album--border" src="images/dicography-album-cover-2.jpg" alt="Album 2: My Space - 2019"></a>
                         <h1>
                             My Space
                         </h1>
@@ -168,8 +171,8 @@
                             2019
                         </p>
                     </div>
-                    <div class="releaseAlbum__album">
-                        <a href="#" target="_blank"><img src="images/dicography-album-cover-3.jpg" alt="Album 3: Trance Year Mix - 2018"></a>
+                    <div class="releaseAlbums__album">
+                        <a href="discography.html" target="_blank"><img class="releaseAlbums__album--border" src="images/dicography-album-cover-3.jpg" alt="Album 3: Trance Year Mix - 2018"></a>
                         <h1>
                             Trance Year Mix
                         </h1>
@@ -181,7 +184,7 @@
             </article>
 
             <article class="homeFanbase">
-                <div class="homeFanbase__gallery fanbaseGallery">
+                <div class="homeFanbase__gallery fanbaseGallery clearfix">
                     <!--INSERT ALT TEXT FOR EACH FANBASE IMAGE-->
                     <img class="fanbaseGallery__image" src="images/fanbase-1.jpg" alt="#">
                     <img class="fanbaseGallery__image" src="images/fanbase-2.jpg" alt="#">
@@ -199,10 +202,12 @@
                             Take your chance to join DJ Angerone's fan club to receive exclusive tracks, free downloads, and other great offers.
                         </p>
                     </div>
+                    <br>
                     <div class="fanbaseBenefits__list benefitList">
                         <div class="benefitList__element listElement">
                             <img class="listElement__icon">
                                 <!-- ADD ICON + LINK -->
+                                <i class="fas fa-headphones-alt"></i>
                             </img>
                             <div class="listElement__detail">
                                 <h2 class="heading--white">
@@ -213,9 +218,11 @@
                                 </p>
                             </div>
                         </div>
+                        <br>
                         <div class="benefitList__element listElement">
                             <img class="listElement__icon">
                                 <!-- ADD ICON + LINK -->
+                                <i class="fas fa-headphones-alt"></i>
                             </img>
                             <div class="listElement__detail">
                                 <h2 class="heading--white">
@@ -226,9 +233,11 @@
                                 </p>
                             </div>
                         </div>
+                        <br>
                         <div class="benefitList__element listElement">
                             <img class="listElement__icon">
                                 <!-- ADD ICON + LINK -->
+                                <i class="fas fa-headphones-alt"></i>
                             </img>
                             <div  class="listElement__detail">
                                 <h2 class="heading--white">
@@ -239,16 +248,55 @@
                                 </p>
                             </div>
                         </div>
+                        <br>
                     </div>
-                </section>
+                </div>
             </article>
 
             <article class="homeSchedule">
                 <h1>
                     Tour Schedule
                 </h1>
-                <section id="scheduleContainer">
-                    <!-- INSERT CODE FOR SCHEDULE CONTAINER FROM TOUR-SCHEDULE.HTML PAGE -->
+                <!-- Calendar --> 
+                <section class="tour__section">
+                    <!-- Months selection bar -->
+                    <nav class="tour__nav">
+                        <button class="tour__button--calendar"><time datetime="2019-03">March</time></button>
+                        <button class="tour__button--calendar"><time datetime="2019-04">April</time></button>
+                        <button class="tour__button--calendar"><time datetime="2019-05">May</time></button>
+                    </nav>
+                    <!-- Contents -->
+                    <!-- March -->
+                    <section class="tour__section--calendar">
+                        <article class="tour__calendar__article tour__calendar__article--row2">
+                            <h3>March 13, 2019</h3>
+                            <h2>Encore Beach Club, Las Vegas</h2>
+                            <p>DJ Angerone will visit one of the most famous night clubs in Las Vegas in March to play his latest tracks and the greatest Trance hits as a part of hus US tous.</p>
+                            <a href="#">Buy tickets >></a>
+                        </article>
+                        <article class="tour__calendar__article tour__calendar__article--row2">
+                            <h3>March 21, 2019</h3>
+                            <h2>Soundscape Weekender Festival, Coventry</h2>                    
+                            <a href="#">Buy tickets >></a>
+                        </article>
+                        <article class="tour__calendar__article tour__calendar__article--row2">
+                            <h3>March 25, 2019</h3>
+                            <h2>Barcelona Beach Festival, Barcelona</h2>                    
+                            <a href="#">Buy tickets >></a>
+                        </article>
+                        <article class="tour__calendar__article tour__calendar__article--row2">
+                            <h3>March 29, 2019</h3>
+                            <h2>Barclaycard Arena, Hamburg</h2>                    
+                            <a href="#">Buy tickets >></a>
+                        </article>
+                        <article class="tour__calendar__article tour__calendar__article--row2">
+                            <h3>March 30, 2019</h3>
+                            <h2>Unipol Arena, Bologna</h2>                    
+                            <a href="#">Buy tickets >></a>
+                        </article>
+                    </section>
+                    <!-- April -->
+                    <!-- May -->
                 </section>
             </article>
 
@@ -258,14 +306,15 @@
                 </h1>
                 <section class="homePartners__list partnersList">
                     <div class="partnersList__slider">
-                        <div class="partnersList__item" >Item 1</div>
-                        <div class="partnersList__item" >Item 2</div>
-                        <div class="partnersList__item" >Item 3</div>
-                        <div class="partnersList__item" >Item 4</div>
+                        <div class="partnersList__item" ><i class="far fa-handshake"></i></div>
+                        <div class="partnersList__item" ><i class="far fa-handshake"></i></div>
+                        <div class="partnersList__item" ><i class="far fa-handshake"></i></div>
+                        <div class="partnersList__item" ><i class="far fa-handshake"></i></div>
                     </div>
                 </section>
                 <button class="homePartners__button"> &nbsp; &bull; &nbsp; &bull; &nbsp; &bull; &nbsp; </button>
-            </article class="homeTickets">
+            </article>
+            <article class="homeTickets">
                 <h1>
                     Tickets
                 </h1>
@@ -409,8 +458,9 @@
             <h1 class="heading--white">
                 Subscribe to Stay Informed
             </h1>
-            <div class="homeNewsletter__form newsletterForm">
-                <form method="GET">
+            <br>
+            <div>
+                <form class="homeNewsletter__form newsletterForm" method="GET">
                     <input class="newsletterForm__input" type="email" name="email_client" value="" placeholder="Your E-mail">
                     <br>
                     <button class="newsletterForm__button button--purple" type="submit">

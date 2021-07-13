@@ -11,13 +11,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.homeHeader {
-    min-height: 800px;
-    background-image: url("./images/homapage-banner-img.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-}
-
 main {
     display:flex;
     flex-direction:column;
@@ -48,6 +41,10 @@ h3 {
 
 p {
  color: #444444;
+}
+
+.paragraph--white {
+    color:white;
 }
 
 /* Buttons */
@@ -793,25 +790,31 @@ html {
 /*************************/
 
 /* MOBILE-FIRST DESIGNS (I.E. TABLET AND DESKTOP RESPONSIVENESS TO BE SPECIFIED FURTHER WITH @MEDIA QUERIES*/
+.homepage {
+    width:100%;
+}
+
+.homeHeader {
+    width:100%;
+    background-image: url("./images/homapage-banner-img.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
 .player {
     /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
     width:100%;
     padding:1em;
     display:flex;
     flex-direction: column;
-    /* REMOVE BACKGROUND COLOR FOR FINAL VERSION !*/
-    /*BACKGROUND COLOR SET TO RED WITH 50% TRANSPARENCY TO MAKE .player__heading and .player__song white texts visible in static position*/
-    background-color: rgba(255, 0, 0, 0.5);
     position:relative;
     /* EXACT RELATIVE POSITION TO BE MEASURED ON DESIGN SCREENSHOT */
-    bottom:5em;
+    bottom:8em;
+    z-index:2;
 }
-.player__heading {
-    color:white;
-}
+
 .player__song {
     color:rgba(255, 255, 255,0);
-
     -webkit-text-stroke: 0.5px white;
     /* workaround in case webkit won't work.
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -832,7 +835,7 @@ html {
     background-color:#282828;
     position:relative;
     /* EXACT RELATIVE POSITION TO BE MEASURED ON DESIGN SCREENSHOT */
-    bottom:5em;
+    bottom:8em;
     border-radius:10px;
     text-align: center;
 }
@@ -848,7 +851,7 @@ html {
 .countdown__button {
     /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
     width:100%;
-    padding:2em;
+    padding:1em;
     font-size:150%;
     border-radius:10px;
 }
@@ -868,7 +871,6 @@ html {
     display:flex;
     flex-direction: column;
     align-items:center;
-    
 }
 
 .clearfix {
@@ -885,14 +887,20 @@ html {
 .homeAbout__image {
     margin: 0 0 1em 0;
     border-radius:10px;
+    width:100%;
 }
 
+blockquote {
+    font-size: 150%;
+    margin:0 0 0 1em;
+}
 
 .homeDisco {
     width:100%;
-    padding:5em;
+    padding:2em;
     background-image:url(images/homepage-latest-releases-background.jpg);
     background-repeat: none;
+    background-size:cover;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -909,7 +917,7 @@ html {
 .homeDisco__button {
     /* EXACT WIDTH AND PADDING TO BE MEASURED ON DESIGN SCREENSHOT */
     width:100%;
-    padding:2em;
+    padding:1em;
     font-size:150%;
     border-radius:10px;
 }
@@ -925,16 +933,23 @@ html {
 
 .homeReleases__albums {
     width:100%;
+    margin:auto;
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
 }
 
-.relaseAlbums__album {
+.releaseAlbums__album {
+    width:90%;
+    margin:auto;
     padding:1em;
     text-align: center;
-    
 }
+
+.releaseAlbums__album--border {
+    width:100%;
+}
+
 .homeFanbase {
     width:100%;
     padding:2em;
@@ -951,14 +966,19 @@ html {
     align-items:center;
 }
 
+.fanbaseGallery__image {
+    margin:1em;
+    border-radius:10px;
+    width:100%;
+}
 .homeFanbase__benefits {
     display:flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.fanbaseGallery__image {
-    border-radius:10px;
+.fas {
+    color:white;
 }
 
 .fanbaseBenefits__list {
@@ -976,12 +996,16 @@ html {
     text-align: center;
 }
 
+.homeSchedule {
+    width:100%;
+}
 
 .homePartners {
     width:100%;
     min-height: 20em;
     padding:2em;
     background-image: url(images/homepage-sponsors-background.jpg);
+    background-size: cover;
     background-repeat: none;
     display:flex;
     flex-direction: column;
@@ -989,8 +1013,12 @@ html {
     justify-content: space-around;
 }
 
+.far {
+    color:white;
+}
+
 .homePartners__list {
-	overflow: hidden;
+	overflow: auto;
 }
 
 .partnersList__slider {
@@ -1012,7 +1040,8 @@ html {
 
 .homeTickets {
     width:100%;
-    overflow:hidden;
+    overflow:auto;
+    text-align: center;;
 
 }
 
@@ -1032,6 +1061,10 @@ html {
     padding:2em;
 }
 
+.ticketGrid__item span {
+    font-size: 200%;
+}
+
 .homeGallery {
     width:100%;
     display:flex;
@@ -1048,7 +1081,6 @@ html {
     width:100%;
     padding:2em;
     overflow:hidden;
-    
 }
 .homeNews__heading {
     text-align:center;
@@ -1060,10 +1092,12 @@ html {
     display:flex;
     flex-direction: row;
     justify-content: center;
+    overflow:hidden;
 }
 
 .newsList__item {
     padding:2em;
+    width:100%;
 }
 
 .newsList__item--grey {
@@ -1091,6 +1125,7 @@ html {
     text-align: center;
     background-image:url(images/homepage-footer-background.jpg);
     background-repeat: no-repeat;
+    background-size:cover;
 
 }
 
@@ -1100,11 +1135,13 @@ html {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .newsletterForm__input, .newsletterForm__button {
     padding:2em;
     border-radius: 10px;
+    width:100%;
 }
 
 
