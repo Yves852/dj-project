@@ -902,12 +902,14 @@ p {
     overflow:hidden;
 
 }
+
 .homeTickets__grid {
     display:flex;
     flex-direction:row;
     justify-content: center;
     transition: transform 0.7s ease-in-out;
 }
+
 .homeTickets__grid:hover {
     transform:translate(50%);
 }
@@ -950,6 +952,7 @@ p {
 .newsList__item {
     padding:2em;
 }
+
 .newsList__item--grey {
     color: #282828;
 }
@@ -977,6 +980,7 @@ p {
     background-repeat: no-repeat;
 
 }
+
 .homeNewsletter__form {
     width:100%;
     padding:2em;
@@ -1027,6 +1031,7 @@ p {
     .homeNewsletter__form {
         width:70%;
         flex-direction: row;
+    }
 
 
 }
@@ -1065,7 +1070,6 @@ p {
     .fanbaseBenefits__list {
         flex-direction: column;
         flex-wrap:nowrap;
-
     }
 
     .homeNews__list {
@@ -1074,6 +1078,7 @@ p {
 
     .homeNewsletter__form {
         width:50%;
+    }
 
 }
 
