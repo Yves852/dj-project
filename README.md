@@ -5,7 +5,7 @@ Yves T, William D, Baysaa C
 ## About the project  
 Website of Dj Angerone, consisting of html and css to cover activity and social network of the artist.  
 ## Publishing  
-13th of June, 2021  
+13th of July, 2021  
 ### Link to the website  
 https://yves852.github.io/dj-project/  
 ### The reason  
