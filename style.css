@@ -574,8 +574,8 @@ p {
     padding: 20px;
     /* Calendar grid */
     display: grid;
-    grid-template-columns: 100px auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 100px 1000px;
+    grid-template-rows: 200px 200px 200px 200px 200px;
     grid-template-areas: 
         "pattern article"
         "pattern article"
@@ -589,6 +589,8 @@ p {
 }
 
 .tour__calendar__article {
+    min-width: 500px;
+    min-height: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
     grid-area: article;
