@@ -1,0 +1,6 @@
+header {
+    min-height: 800px;
+    background-image: url("./images/homapage-banner-img.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}

@@ -69,7 +69,9 @@ p {
 /* END - CSS common to the whole website */
 
 /* Header style */
+/* ************ */
 /* NB : mobile first */
+/* Image for all pages except index that have its dedicaced css file */
 header {
     background-image: url("./images/banner-img.jpg");
     text-transform: uppercase;
@@ -99,14 +101,18 @@ header a {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
+    color: white;
+    /* Positionings content with flex */
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    /* Allow elements to wrap, pushing logo and links menu to bottom of openned pages menu */
+    flex-wrap: wrap;
 }
 
 /* Effects on all elements directly children of the class */
 .header__menu>* {
-    margin-right: 20px;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 /* Refer to hn and p showing as head of the pages, not litteral hn headings */
@@ -120,12 +126,10 @@ header a {
 }
 
 /* Second hamburger menu */
-.header__sub-menu {
+.header__social-menu {
     /* Remove apparent background and border */
     background-color: transparent;
     border: none;
-    /* Text color */
-    color: white;
     /* Center vertically */
     align-self: center;
     /* margin-left auto will push this flexed element fully to the right */
@@ -137,7 +141,6 @@ header a {
     /* svg size */    
     width: auto;
     height: 2em;
-    color: white;
 }
 
 /* Angerone's logo */
@@ -145,66 +148,165 @@ header a {
     display: inline-block;
 }
 
+#header-logo>img {
+    max-height: 40px;
+    /*min-width: 40px; */
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+#header__a--pages-menu>img,
+#header__a--social-menu>svg {
+    max-height: 30px;
+}
+
+#header-logo, 
+#header-pages-wrap,
+#header-social-wrap {
+    width: auto;
+    /* Center vertically */
+    align-self: center;  
+}
+
 /* Hamburger menu */
 /* Source : https://codepen.io/benoitwimart/pen/ORPmrg/ */
-#wrap {
-    /* font-family: sans-serif; */
-    /*font-size: 21px;*/
-    /*line-height: 1.6;*/
-    /*margin: 0;*/
-    /*display: flex;*/
-    color: #8121e0;
-    transition: transform .4s cubic-bezier(.25, .1, .25, 1);
-    /* Center vertically */
-    align-self: center;
-}
-
+    
 /* ul with links */
-#menu-content {
-    display: flex;
-    justify-content: space-around;
-}
-
-/* Change #wrap bloc size and display when menu is not clicked*/
-#wrap:not(:target)  {
-    /*transform: translate3d(-335px, 0, 0);*/
-    width: 50px; /* Restrict size so other elements come next to it */
-    display: inline-block;
-}
-
-/* Change #wrap when menu clicked */
-#wrap:target {
-    /*transform: translate3d(0, 0, 0);*/
-    width: 100%;
+#header__ul--pages, #header__ul--social {    
+    /* Flex */
     display: flex;
     justify-content: space-evenly;
-    margin-top: 40px;
 }
 
-/* This bloc make content disapear when menu unclicked*/
-#wrap:not(:target) #menu-content {
-    display: none;
+/* Shown and effective when screen is 1024px or below */
+@media only screen and (max-width: 1024px) {
+    #header__ul--pages {
+        font-size: small;
+    }
+
+    #header-social-wrap {
+        font-size: x-large;
+    }
+
+
+    /* Change #wrap bloc size and display when menu is not clicked*/
+    #header-pages-wrap:not(:target)  {
+        /*transform: translate3d(-335px, 0, 0);*/
+        width: 50px; /* Restrict size so other elements come next to it */
+        display: inline-block;
+    }
+
+    #header-social-wrap:not(:target) {
+        margin-left: auto;
+    }
+    
+    /* This bloc make content disapear when menu unclicked*/
+    #header-pages-wrap:not(:target) #header__ul--pages,
+    #header-social-wrap:not(:target) #header__ul--social {
+        display: none;
+    }
+
+    /* Display pages menu when menu clicked */
+    #header-pages-wrap:target {
+        width: 100%;
+        margin-top: 40px;
+        /* Flex positioning content */
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* When clicked, lists take all width */
+    #header-pages-wrap:target>#header__ul--pages {
+        width: 100%;
+    }
+    /* Display links menu when clicked */
+    #header-social-wrap:target {
+        width: 100%;
+        margin-top: 40px; 
+        /* Flex positioning content */
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #header-social-wrap:target>#header__ul--social {
+        width: 100%;
+    }
+    
+    /* Styling buttons */
+    /* 
+    #header__a--pages-menu,
+    #header__a--pages-close,
+    #header__a--social-menu,
+    #header__a--social-close 
+    */ 
+    .header__a--menu {
+        /* Flex */
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    
+    /* Buttons display conditions */
+    #header-pages-wrap:target #header__a--pages-menu,
+    #header-social-wrap:target #header__a--social-menu,
+    #header-pages-wrap:not(:target) #header__a--pages-close,
+    #header-social-wrap:not(:target) #header__a--social-close {
+        display: none;
+    }
+    
+    #header-pages-wrap:target #header__a--pages-menu 
+    #header-social-wrap:target #header__a--social-menu {
+        display: none;
+    }
 }
 
-/* Styling buttons */
-#header-hamburger-open,
-#header-hamburger-close {
-    color: white;
-    height: 44px;
-    font-size: larger;
-    /*text-align: right;*/
-    /* display: block; */
-    /*margin-right: -30px;*/
-}
 
-/* Buttons display conditions */
-#wrap:target #header-hamburger-open,
-#wrap:not(:target) #header-hamburger-close {
-    display: none;
-}
+/* Responsive header */
+/* Desktop screen and above */
+@media only screen and (min-width: 1025px) {
+    .header__menu {
+        font-size: small;
+        justify-content: space-evenly;   
+        flex-wrap: nowrap;  
+        background-color: transparent;   
+    }
 
-#wrap:target #header-hamburger-open {
-    display: none;
+    .header-nav {
+        display: flex;
+        width: auto;
+    }
+
+    /* Hidding hamburger's buttons */
+    .header-nav, #header__a--social-menu {
+       visibility: hidden;
+    }
+
+    /* Showing hamburger's menus as normal menus */
+    #header__ul--pages, 
+    #header__ul--social {
+        visibility: visible;
+        justify-content: space-around;
+        width: auto;
+    }
+
+
+    #header__ul--pages {
+        min-width: 450px;
+    }
+
+    #header__ul--social {
+        min-width: 250px;
+    }
+
+    #header-logo {
+        /* Changing order to get logo first */
+        order: -1;
+    } 
+
+    /* #header__ul--pages {
+        display: inline;
+    } */
 }
 
 /* FOOTER */
@@ -220,7 +322,7 @@ footer {
 }
 
 
-/* LINK TO THE PAGES */
+/* FOOTER LINK TO THE PAGES */
 
 a {
     color: white;
@@ -237,7 +339,7 @@ a {
 }
 
 
-/* LINK TO SOCIAL MEDIAS */
+/* FOOTER LINK TO SOCIAL MEDIAS */
 
 .linksocial {
     list-style-type: none;
@@ -253,10 +355,11 @@ a {
     background: #444444;
     padding: 2em;
     margin: 0 1em;
+    box-sizing: unset;
 }
 
 
-/* BACK-TO-TOP BUTTON */
+/* FOOTER BACK-TO-TOP BUTTON */
 
 .topbutton {
     border-radius: 15%;
@@ -264,12 +367,12 @@ a {
     width: 1.5em;
     height: 1.5em;
     padding: 1em;
-    /* margin: 0 auto; */
     text-align: center;
     line-height: 2em;
     position: fixed;
     bottom: 2em;
     right: 2em;
+    box-sizing: unset;
 }
 
 .uparrow {
@@ -281,11 +384,27 @@ html {
 }
 
 
-/* COPYRIGHT */
+/* FOOTER COPYRIGHT */
 
 p {
     color: #444444;
 }
+
+/* FOOTER MEDIA QUERIES */
+
+@media only screen and (max-width: 768px){
+
+    .socialfooter{
+        padding: 1em;
+    }
+
+    footer{
+        padding-bottom: 10em;
+    }
+
+}
+
+
 
 /* Page about */
 /* ********** */
@@ -294,67 +413,213 @@ p {
 .about {
     background-color: white;
     width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.about svg {
+.about__p {
+    margin-bottom: 10px;
+    color: #444444;
+}
+
+.about__h1 {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+/* svg logos */
+.about__svg--logo {
     height: 1em;
     width: auto;
     margin-right: 10px;
 }
 
-.about--style {
-    padding-top: 40px;
-    padding-bottom: 40px;
+.about__svg--logo--black {
+    color: black;
 }
 
-.about hr {
-    width: 40%;
+.about__svg--logo--grey {
+    color: #cfcfcf;
+}
+
+.about__hr {
+    border: none;
+    border-top: 0.12em solid #cfcfcf;
+    width: 20%;
     position: relative;
     margin: 20px;
-    margin-left: 5px;
-    color: #444444;
+    margin-left: 0;
 }
 
 /* Sections class */
-.about-sections {
-    margin-top: 40px;
+.about__section {
+    padding-top: 40px;
+    /* margin-top: 40px; */
     margin-bottom: 40px;
     /* width: 100%; */
-    padding-left: 5%;
-    padding-right: 5%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#about-musics img {
-    width: 50px;
-    height: auto;
+.about__section--links {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-/* Sections ids */
-
-/* Links section */
-#about-links a {
+.about__section--links a {
     margin-top: 10px;
     margin-right: 15px;
 }
 
-#about-musics {
+.about__section--music {
     background-color: #f5f5f5;
     text-align: center;
 }
 
-#about-latest {
+.about__section--music p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.about__section--latest {
     text-align: center;
 }
 
+/* Articles */
+.about__article {
+    padding-right: 0;
+    padding-left: 0;    
+}
+
+.about__article>* {
+    margin-bottom: 10px;
+}
+
+
+/* .about__article p, 
+.about__article h3, 
+.about__article img {
+    margin-bottom: 10px;
+} */
+
+.about__article--music {
+    padding: 0;
+    /*border: 3px solid white;
+    border-color: white transparent transparent transparent;
+    border-radius: 50%/100% 100% 0 0; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 /* button contact */
-#about-btn-contact {
+.about__button--contact {
     width: 150px;
-    height: 3em;
+    height: 4em;
     text-transform: uppercase;
     margin: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8121e0;
+    color: white;
+    font-weight: bolder;
 }
+
+/* Images in music section */
+.about__img--music {
+    width: 50px;
+    height: auto;
+}
+
+/* Responsive */
+/* Tablet screen and below */
+@media only screen and (min-width:1024px) {
+    /* About links section */
+    .about__article {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "left img";
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    #about-links-left {
+        grid-area: left;
+    }
+
+    #about-img-angerone {
+        grid-area: img;
+    }
+
+    /* About music section */
+    .about__section--music {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .about__article {
+        /* Forcing article title taking a whole row */
+        min-width: 100%;
+    }
+
+    .about__article--music {
+        /* Positioning music articles by 3 columns, 2 rows */
+        min-width: 33%;
+        max-width: 33%;
+        /* Content positioning */
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "img h3"
+            "img p";
+    }
+
+    .about__article--music img {
+        margin-right: 20px;
+        grid-area: img;
+    }
+
+    .about__article--music h3 {
+        grid-area: h3;
+    }
+
+    .about__article--music p {
+        grid-area: p;
+        margin: 0;
+    }
+
+    /* About latest section */
+    .about__section--latest {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .about__h1--latest, .about__p--latest {
+        min-width: 80%;
+    }
+
+    .about__article--latest {
+        display: inline-block;
+    }
+
+    .about__article--latest, .about__article--latest figure {
+        width: 20%;
+        height: auto;
+    }
+
+    /* .about__article--latest img {
+        width: 50%;
+    } */
+}
+
+/* Sections ids, unique elements */
 
 /* Images */
 /* img signature */
@@ -376,25 +641,56 @@ p {
     padding-right: 5%; */
 }
 
-/* Responsive */
-@media only screen and (min-width: 1025) {
-    /* Desktop screens and above */
-    .about {
+/* Page tour schedule */
+/* **************** */
 
-    }
+.tour__section {
+    margin: 40px;
 }
 
+.tour__nav {
+    background-color: black;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px 15px 0 0;
+}
 
+.tour__button--calendar {
+    border:none;
+    background-color: inherit;
+    height: 3em;
 
+    /* Text style */
+    color: #444444;
+    font-size: larger;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
 
+.tour__button--calendar:hover {
+    color: white;
+    border-bottom: 4px solid #8121e0;
+}
 
+.tour__section--calendar {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
 
+.tour__section--calendar a {
+    color: black;
+}
 
+.tour__calendar__article *{
+    margin: 10px;
+}
 
-
-
-
-
+.tour__calendar__article--row2 {
+    grid-column: 2;
+}
 
 
 /* START HOMEPAGE STYLES */
