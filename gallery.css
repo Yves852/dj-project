@@ -1,11 +1,11 @@
-.grid {
+.gallery__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
     grid-gap: 2em;
     align-items: center;
 }
 
-.grid>article {
+.gallery__grid>article {
     border: none;
     /* box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2); */
     text-align: center;
@@ -13,12 +13,12 @@
     position: relative;
 }
 
-.grid>article:hover {
+.gallery__grid>article:hover {
     transform: translateY(5px);
     /* box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2); */
 }
 
-.button {
+.gallery__button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -38,6 +38,7 @@
 }
 
 
-article:hover button{
+.gallery__article:hover button{
     opacity: 100;
 }
+
