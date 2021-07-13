@@ -574,8 +574,8 @@ p {
     padding: 20px;
     /* Calendar grid */
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% min-content;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto;
     grid-template-areas: 
         "pattern article"
         "pattern article"
@@ -603,22 +603,26 @@ p {
 } */
 
 .tour__calendar--pattern {
-    height: 20%;
+    height: 50px;
+    width: 50px;
     grid-area: pattern;
 }
 
 .tour--calendar-circle1 {
-    width: 25px;
-    height: auto;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: blueviolet;
+    border: 2px solid black;
 }
 
 .tour--calendar-circle2 {
-    width: 50px;
-    height: auto;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    border: 1px solid black;
+    background-color: blueviolet;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
 }
 
 /* Responsive */
